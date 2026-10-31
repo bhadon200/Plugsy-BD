@@ -1,12 +1,8 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#080b14">
-
-<!-- Facebook Open Graph -->
 <meta property="fb:app_id" content="1939759096994051">
 <meta property="og:url" content="https://bhadon200.github.io/Plugsy-BD/">
 <meta property="og:type" content="website">
@@ -16,651 +12,178 @@
 <meta property="og:image:secure_url" content="https://bhadon200.github.io/Plugsy-BD/logo.png">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:alt" content="Plugsy BD Logo">
-
 <title>Plugsy BD | Smart Gadget Store</title>
-
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Arial,sans-serif;background:#080b14;color:#fff}
+*{box-sizing:border-box;margin:0;padding:0}body{font-family:Arial,sans-serif;background:#080b14;color:#fff}
 header{background:#101827;padding:18px 6%;display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap;border-bottom:1px solid #263449}
-.logo{font-size:25px;font-weight:bold;color:#00e5ff}
-nav{display:flex;gap:16px;flex-wrap:wrap}
-nav a{color:white;text-decoration:none;font-size:14px}
-nav a:hover{color:#00e5ff}
+.logo{font-size:25px;font-weight:bold;color:#00e5ff}nav{display:flex;gap:16px;flex-wrap:wrap}nav a{color:white;text-decoration:none;font-size:14px}nav a:hover{color:#00e5ff}
 .hero{padding:85px 7%;min-height:390px;background:radial-gradient(circle at 80% 25%,#123e55,transparent 35%),linear-gradient(135deg,#101827,#080b14)}
-.hero h1{font-size:clamp(35px,6vw,60px);max-width:700px;margin-bottom:18px}
-.hero h1 span,.section-title span{color:#00e5ff}
-.hero p{color:#b6c5d8;line-height:1.8;max-width:620px;margin-bottom:24px}
-.btn{border:0;border-radius:7px;background:#00d5ed;color:#061018;padding:12px 18px;font-weight:bold;cursor:pointer;text-decoration:none;display:inline-block}
-.btn:hover{background:#00aeca}
-.btn.danger{background:#e74c3c;color:white}
-.btn.secondary{background:#34445b;color:white}
-.section{padding:55px 7%}
-.section-title{text-align:center;font-size:30px;margin-bottom:28px}
-.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
-.product,.panel,.cart-box{background:#111b2b;border:1px solid #263449;border-radius:12px;overflow:hidden}
-.product img{width:100%;height:190px;object-fit:cover;background:#1b293b}
-.product-info{padding:17px}
-.product-info h3{margin-bottom:10px}
-.price{color:#00e5ff;font-size:20px;font-weight:bold;margin:10px 0}
-.old-price{text-decoration:line-through;color:#8795a8;font-size:14px;margin-left:7px}
-.discount-tag{color:#8fffa8;font-size:13px;margin:5px 0}
-.product button{width:100%;margin-top:10px}
-.about{background:#101827;text-align:center;line-height:1.8;color:#bdc9d8}
-.about .section-title{color:white}
-.cart-box,.panel{padding:22px}
-.cart-item{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid #34445b}
-.total-line{display:flex;justify-content:space-between;margin:12px 0;color:#cbd5e1}
-.grand-total{font-size:22px;font-weight:bold;color:#00e5ff}
+.hero h1{font-size:clamp(35px,6vw,60px);max-width:700px;margin-bottom:18px}.hero h1 span,.section-title span{color:#00e5ff}
+.hero p{color:#b6c5d8;line-height:1.8;max-width:620px;margin-bottom:24px}.btn{border:0;border-radius:7px;background:#00d5ed;color:#061018;padding:12px 18px;font-weight:bold;cursor:pointer;text-decoration:none;display:inline-block}
+.btn:hover{background:#00aeca}.btn:disabled{opacity:.5;cursor:not-allowed}.btn.danger{background:#e74c3c;color:white}.btn.secondary{background:#34445b;color:white}
+.section{padding:55px 7%}.section-title{text-align:center;font-size:30px;margin-bottom:28px}.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.product,.panel,.cart-box{background:#111b2b;border:1px solid #263449;border-radius:12px;overflow:hidden}.product img{width:100%;height:205px;object-fit:cover;background:#1b293b;display:block}
+.product-info{padding:17px}.product-info h3{margin-bottom:10px}.price{color:#00e5ff;font-size:20px;font-weight:bold;margin:10px 0}.old-price{text-decoration:line-through;color:#8795a8;font-size:14px;margin-left:7px}
+.discount-tag{color:#8fffa8;font-size:13px;margin:5px 0}.product button{width:100%;margin-top:10px}.about{background:#101827;text-align:center;line-height:1.8;color:#bdc9d8}.about .section-title{color:white}
+.cart-box,.panel{padding:22px}.cart-item{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid #34445b}
+.total-line{display:flex;justify-content:space-between;margin:12px 0;color:#cbd5e1}.grand-total{font-size:22px;font-weight:bold;color:#00e5ff}
 input,textarea,select{width:100%;padding:12px;margin:7px 0 14px;background:#080b14;border:1px solid #34445b;border-radius:6px;color:white}
-label{font-size:14px;color:#cbd5e1}
-.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.admin-area{background:#0c1422}
-.admin-actions{display:flex;gap:10px;flex-wrap:wrap;margin:15px 0}
-.admin-product,.order-card{padding:14px;border:1px solid #34445b;border-radius:8px;margin:10px 0;background:#0b1320}
-.hidden{display:none!important}
-.small{font-size:13px;color:#aab8ca;line-height:1.6}
-footer{text-align:center;padding:25px;background:#05080f;color:#9aabba}
-@media(max-width:600px){
- header{justify-content:center;text-align:center}
- nav{justify-content:center}
- .hero{padding:60px 6%}
- .section{padding:40px 6%}
- .form-grid{grid-template-columns:1fr}
- .cart-item{align-items:flex-start;flex-direction:column}
-}
+label{font-size:14px;color:#cbd5e1}.admin-area{background:#0c1422}.admin-actions{display:flex;gap:10px;flex-wrap:wrap;margin:15px 0}
+.admin-product,.order-card{padding:14px;border:1px solid #34445b;border-radius:8px;margin:10px 0;background:#0b1320}.admin-product img{width:90px;height:70px;object-fit:cover;border-radius:6px;float:right}
+.hidden{display:none!important}.small{font-size:13px;color:#aab8ca;line-height:1.6}footer{text-align:center;padding:25px;background:#05080f;color:#9aabba}
+@media(max-width:600px){header{justify-content:center;text-align:center}nav{justify-content:center}.hero{padding:60px 6%}.section{padding:40px 6%}.cart-item{align-items:flex-start;flex-direction:column}}
 </style>
 </head>
-
 <body>
-<header>
-  <div class="logo">⚡ PLUGSY BD</div>
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#products">Products</a>
-    <a href="#about">About</a>
-    <a href="#cart">Cart (<span id="cartCount">0</span>)</a>
-    <a href="#contact">Contact</a>
-    <a href="#admin">Admin</a>
-  </nav>
-</header>
+<header><div class="logo">⚡ PLUGSY BD</div><nav>
+<a href="#home">Home</a><a href="#products">Products</a><a href="#about">About</a><a href="#cart">Cart (<span id="cartCount">0</span>)</a><a href="#contact">Contact</a><a href="#admin">Admin</a>
+</nav></header>
+<section class="hero" id="home"><h1>Upgrade Your Life With <span>Smart Gadgets</span></h1><p>Discover the latest technology, smart gadgets and accessories at Plugsy BD. Quality products at affordable prices.</p><a class="btn" href="#products">Explore Products</a></section>
+<section class="section" id="products"><h2 class="section-title">Our <span>Products</span></h2><div id="productList" class="products"><p class="small">Connecting to store...</p></div></section>
+<section class="section" id="cart"><h2 class="section-title">Shopping <span>Cart</span></h2><div class="cart-box">
+<div id="cartItems">Your cart is empty.</div><div class="total-line"><span>Subtotal</span><strong>৳ <span id="subtotal">0</span></strong></div>
+<div class="total-line"><span>Discount</span><strong>৳ <span id="discountTotal">0</span></strong></div><div class="total-line"><span>Delivery Charge</span><strong>৳ <span id="deliveryTotal">0</span></strong></div>
+<div class="total-line grand-total"><span>Total</span><span>৳ <span id="grandTotal">0</span></span></div>
+<h3 style="margin:22px 0 12px">Customer Information</h3><label>Your Name</label><input id="customerName" placeholder="Enter your name">
+<label>Phone Number</label><input id="customerPhone" placeholder="01XXXXXXXXX" inputmode="tel"><label>Delivery Address</label><textarea id="customerAddress" rows="3" placeholder="Your full address"></textarea>
+<button class="btn" id="placeOrderBtn" onclick="placeOrder()">Place Order</button><p class="small" id="orderMessage"></p></div></section>
+<section class="section about" id="about"><h2 class="section-title">About <span>Plugsy BD</span></h2><p>Plugsy BD is an online gadget store bringing modern technology and useful electronic accessories to customers. Our goal is to make shopping simple, convenient and affordable.</p></section>
+<section class="section" id="contact" style="text-align:center"><h2 class="section-title">Contact <span>Us</span></h2><p>Email: plugsybd@gmail.com</p><p>Location: Bangladesh</p></section>
+<section class="section admin-area" id="admin"><h2 class="section-title">Admin <span>Panel</span></h2>
+<div class="panel" id="loginPanel"><h3>Admin Login</h3><p class="small">Sign in with the admin email and password created in Firebase Authentication.</p>
+<label>Admin Email</label><input id="adminEmail" type="email" placeholder="Your admin email"><label>Password</label><input id="adminPassword" type="password" placeholder="Your admin password">
+<button class="btn" onclick="adminLogin()">Login</button><p id="loginMessage" class="small"></p></div>
+<div class="panel hidden" id="dashboard"><h3>Welcome, Admin</h3><div class="admin-actions">
+<button class="btn secondary" onclick="showAdminTab('productsTab')">Manage Products</button><button class="btn secondary" onclick="showAdminTab('settingsTab')">Discount & Delivery</button>
+<button class="btn secondary" onclick="showAdminTab('ordersTab')">Orders</button><button class="btn danger" onclick="adminLogout()">Logout</button></div>
+<div id="productsTab"><h3 id="productFormTitle">Add New Product</h3><input type="hidden" id="editProductId">
+<label>Product Name</label><input id="pName" placeholder="Product name"><label>Product Image URL</label><input id="pImage" type="url" placeholder="Direct image URL (https://...)">
+<p class="small">Product photo: upload the picture to an image hosting service and paste its direct image link here.</p>
+<label>Price (৳)</label><input id="pPrice" type="number" min="0" placeholder="Product price"><label>Product Discount (%)</label><input id="pDiscount" type="number" min="0" max="100" value="0">
+<label>Description</label><textarea id="pDescription" rows="2" placeholder="Product details"></textarea><button class="btn" onclick="saveProduct()">Save Product</button><button class="btn secondary" onclick="clearProductForm()">Clear</button>
+<h3 style="margin-top:25px">All Products</h3><div id="adminProducts"></div></div>
+<div id="settingsTab" class="hidden"><h3>Store Settings</h3><label>Global Discount (%)</label><input id="globalDiscount" type="number" min="0" max="100"><label>Delivery Charge (৳)</label><input id="deliveryCharge" type="number" min="0"><button class="btn" onclick="saveSettings()">Save Settings</button><p class="small">Global discount applies to products unless a product has its own discount.</p></div>
+<div id="ordersTab" class="hidden"><h3>Customer Orders</h3><div id="ordersList">Loading orders...</div></div></div></section>
+<footer><p>© 2026 Plugsy BD. All Rights Reserved.</p><p>Designed with ❤️ for Technology Lovers</p></footer>
 
-<section class="hero" id="home">
-  <h1>Upgrade Your Life With <span>Smart Gadgets</span></h1>
-  <p>Discover the latest technology, smart gadgets and accessories at Plugsy BD. Quality products at affordable prices.</p>
-  <a class="btn" href="#products">Explore Products</a>
-</section>
-
-<section class="section" id="products">
-  <h2 class="section-title">Our <span>Products</span></h2>
-  <div id="productList" class="products">
-    <p class="small">Loading products...</p>
-  </div>
-</section>
-
-<section class="section" id="cart">
-  <h2 class="section-title">Shopping <span>Cart</span></h2>
-  <div class="cart-box">
-    <div id="cartItems">Your cart is empty.</div>
-    <div class="total-line"><span>Subtotal</span><strong>৳ <span id="subtotal">0</span></strong></div>
-    <div class="total-line"><span>Discount</span><strong>৳ <span id="discountTotal">0</span></strong></div>
-    <div class="total-line"><span>Delivery Charge</span><strong>৳ <span id="deliveryTotal">0</span></strong></div>
-    <div class="total-line grand-total"><span>Total</span><span>৳ <span id="grandTotal">0</span></span></div>
-
-    <h3 style="margin:22px 0 12px">Customer Information</h3>
-    <label>Your Name</label>
-    <input id="customerName" placeholder="Enter your name">
-    <label>Phone Number</label>
-    <input id="customerPhone" placeholder="01XXXXXXXXX" inputmode="tel">
-    <label>Delivery Address</label>
-    <textarea id="customerAddress" rows="3" placeholder="Your full address"></textarea>
-    <button class="btn" id="placeOrderBtn" onclick="placeOrder()">Place Order</button>
-    <p class="small" id="orderMessage"></p>
-  </div>
-</section>
-
-<section class="section about" id="about">
-  <h2 class="section-title">About <span>Plugsy BD</span></h2>
-  <p>Plugsy BD is an online gadget store bringing modern technology and useful electronic accessories to customers. Our goal is to make shopping simple, convenient and affordable.</p>
-</section>
-
-<section class="section" id="contact" style="text-align:center">
-  <h2 class="section-title">Contact <span>Us</span></h2>
-  <p>Email: plugsybd@gmail.com</p>
-  <p>Location: Bangladesh</p>
-</section>
-
-<section class="section admin-area" id="admin">
-  <h2 class="section-title">Admin <span>Panel</span></h2>
-
-  <div class="panel" id="loginPanel">
-    <h3>Admin Login</h3>
-    <p class="small">Sign in with the admin email and password created in Firebase Authentication.</p>
-    <label>Admin Email</label>
-    <input id="adminEmail" type="email" placeholder="Your admin email">
-    <label>Password</label>
-    <input id="adminPassword" type="password" placeholder="Your admin password">
-    <button class="btn" onclick="adminLogin()">Login</button>
-    <p id="loginMessage" class="small"></p>
-  </div>
-
-  <div class="panel hidden" id="dashboard">
-    <h3>Welcome, Admin</h3>
-    <div class="admin-actions">
-      <button class="btn secondary" onclick="showAdminTab('productsTab')">Manage Products</button>
-      <button class="btn secondary" onclick="showAdminTab('settingsTab')">Discount & Delivery</button>
-      <button class="btn secondary" onclick="showAdminTab('ordersTab')">Orders</button>
-      <button class="btn danger" onclick="adminLogout()">Logout</button>
-    </div>
-
-    <div id="productsTab">
-      <h3 id="productFormTitle">Add New Product</h3>
-      <input type="hidden" id="editProductId">
-      <label>Product Name</label>
-      <input id="pName" placeholder="Product name">
-      <label>Product Image URL</label>
-      <input id="pImage" placeholder="https://example.com/image.jpg">
-      <label>Price (৳)</label>
-      <input id="pPrice" type="number" min="0" placeholder="Product price">
-      <label>Product Discount (%)</label>
-      <input id="pDiscount" type="number" min="0" max="100" value="0">
-      <label>Description</label>
-      <textarea id="pDescription" rows="2" placeholder="Product details"></textarea>
-      <button class="btn" onclick="saveProduct()">Save Product</button>
-      <button class="btn secondary" onclick="clearProductForm()">Clear</button>
-      <h3 style="margin-top:25px">All Products</h3>
-      <div id="adminProducts"></div>
-    </div>
-
-    <div id="settingsTab" class="hidden">
-      <h3>Store Settings</h3>
-      <label>Global Discount (%)</label>
-      <input id="globalDiscount" type="number" min="0" max="100">
-      <label>Delivery Charge (৳)</label>
-      <input id="deliveryCharge" type="number" min="0">
-      <button class="btn" onclick="saveSettings()">Save Settings</button>
-      <p class="small">Global discount applies to products unless a product has its own discount.</p>
-    </div>
-
-    <div id="ordersTab" class="hidden">
-      <h3>Customer Orders</h3>
-      <div id="ordersList">Loading orders...</div>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <p>© 2026 Plugsy BD. All Rights Reserved.</p>
-  <p>Designed with ❤️ for Technology Lovers</p>
-</footer>
-
-<!-- Firebase SDK -->
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
-
 <script>
-// 1. Replace these values with your Firebase Web App configuration.
-const firebaseConfig = {
-  apiKey: "PASTE_YOUR_API_KEY",
-  authDomain: "PASTE_YOUR_PROJECT_ID.firebaseapp.com",
-  projectId: "PASTE_YOUR_PROJECT_ID",
-  storageBucket: "PASTE_YOUR_PROJECT_ID.appspot.com",
-  messagingSenderId: "PASTE_YOUR_MESSAGING_SENDER_ID",
-  appId: "PASTE_YOUR_APP_ID"
+const firebaseConfig={
+ apiKey:"AIzaSyBcZnvFb5kop3IQohdBED6ze_HeY8ndzWE",
+ authDomain:"plugsy-bd.firebaseapp.com",
+ projectId:"plugsy-bd",
+ storageBucket:"plugsy-bd.firebasestorage.app",
+ messagingSenderId:"517720559242",
+ appId:"1:517720559242:web:53df1068ab68c4f3512773",
+ measurementId:"G-CS2ZV7ZTSD"
 };
-
 firebase.initializeApp(firebaseConfig);
-
-const auth = firebase.auth();
-const db = firebase.firestore();
-
-let products = [];
-let cart = JSON.parse(localStorage.getItem("plugsyCart") || "[]");
-let storeSettings = {globalDiscount: 0, deliveryCharge: 0};
-let isAdmin = false;
-let unsubscribeProducts = null;
-let unsubscribeSettings = null;
-
-function money(n) {
-  return Math.round(Number(n) || 0).toLocaleString("en-BD");
+const auth=firebase.auth(),db=firebase.firestore();
+const ADMIN_UID="CzIH5NcMJhSK09QazZuirhCW69A2";
+let products=[],cart=JSON.parse(localStorage.getItem("plugsyCart")||"[]");
+let storeSettings={globalDiscount:0,deliveryCharge:0},isAdmin=false;
+let stopProducts=null,stopSettings=null;
+const $=id=>document.getElementById(id);
+function money(n){return Math.round(Number(n)||0).toLocaleString("en-BD")}
+function esc(v){return String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function discountOf(p){return Number(p.discount)>0?Number(p.discount):Number(storeSettings.globalDiscount)||0}
+function priceOf(p){return Math.round((Number(p.price)||0)*(1-discountOf(p)/100))}
+function listenProducts(){
+ if(stopProducts)stopProducts();
+ stopProducts=db.collection("products").onSnapshot(s=>{
+  products=s.docs.map(d=>({id:d.id,...d.data()})).sort((a,b)=>(b.createdAt?.seconds||0)-(a.createdAt?.seconds||0));
+  renderProducts();renderAdminProducts();updateCart();
+ },e=>{$("productList").textContent="Unable to load products: "+e.message;console.error(e)});
 }
-
-function effectiveDiscount(product) {
-  if (Number(product.discount) > 0) return Number(product.discount);
-  return Number(storeSettings.globalDiscount) || 0;
+function listenSettings(){
+ if(stopSettings)stopSettings();
+ stopSettings=db.collection("settings").doc("store").onSnapshot(d=>{
+  if(d.exists)storeSettings={...storeSettings,...d.data()};
+  renderProducts();updateCart();
+  if(isAdmin){$("globalDiscount").value=storeSettings.globalDiscount||0;$("deliveryCharge").value=storeSettings.deliveryCharge||0}
+ },console.error);
 }
-
-function finalPrice(product) {
-  const price = Number(product.price) || 0;
-  return Math.round(price * (1 - effectiveDiscount(product) / 100));
+function renderProducts(){
+ const a=$("productList");
+ if(!products.length){a.innerHTML='<p class="small">No products available yet. Admin can add products from Admin Panel.</p>';return}
+ a.innerHTML=products.map(p=>{const d=discountOf(p),img=p.image||"https://placehold.co/600x400/152238/00e5ff?text=Plugsy+BD";
+ return `<article class="product"><img src="${esc(img)}" alt="${esc(p.name)}" onerror="this.onerror=null;this.src='https://placehold.co/600x400/152238/00e5ff?text=Image+Unavailable'">
+ <div class="product-info"><h3>${esc(p.name||"Product")}</h3><p class="price">৳ ${money(priceOf(p))} ${d?`<span class="old-price">৳ ${money(p.price)}</span>`:""}</p>
+ ${d?`<p class="discount-tag">${d}% OFF</p>`:""}<p class="small">${esc(p.description||"")}</p><button class="btn" onclick="addToCart('${p.id}')">Add to Cart</button></div></article>`}).join("");
 }
-
-// Live product updates: all customers see changes from Firestore.
-function listenProducts() {
-  if (unsubscribeProducts) unsubscribeProducts();
-
-  unsubscribeProducts = db.collection("products").orderBy("createdAt", "desc")
-    .onSnapshot(snapshot => {
-      products = snapshot.docs.map(doc => ({id: doc.id, ...doc.data()}));
-      renderProducts();
-      renderAdminProducts();
-      updateCart();
-    }, error => {
-      document.getElementById("productList").textContent =
-        "Could not load products. Check Firebase setup and Firestore rules.";
-      console.error(error);
-    });
+function addToCart(id){const p=products.find(x=>x.id===id);if(!p)return;const i=cart.find(x=>x.id===id);if(i)i.quantity++;else cart.push({id,quantity:1});saveCart()}
+function saveCart(){localStorage.setItem("plugsyCart",JSON.stringify(cart));updateCart()}
+function changeQuantity(id,n){const i=cart.find(x=>x.id===id);if(!i)return;i.quantity+=n;if(i.quantity<=0)cart=cart.filter(x=>x.id!==id);saveCart()}
+function removeCartItem(id){cart=cart.filter(x=>x.id!==id);saveCart()}
+function totals(){
+ let subtotal=0,after=0;cart.forEach(i=>{const p=products.find(x=>x.id===i.id);if(p){subtotal+=Number(p.price)*i.quantity;after+=priceOf(p)*i.quantity}});
+ const delivery=cart.length?Number(storeSettings.deliveryCharge||0):0;return{subtotal,discount:subtotal-after,delivery,total:after+delivery};
 }
-
-function listenSettings() {
-  if (unsubscribeSettings) unsubscribeSettings();
-
-  unsubscribeSettings = db.collection("settings").doc("store")
-    .onSnapshot(doc => {
-      if (doc.exists) storeSettings = {...storeSettings, ...doc.data()};
-      renderProducts();
-      updateCart();
-
-      if (isAdmin) {
-        document.getElementById("globalDiscount").value = storeSettings.globalDiscount || 0;
-        document.getElementById("deliveryCharge").value = storeSettings.deliveryCharge || 0;
-      }
-    }, error => console.error(error));
+function updateCart(){
+ cart=cart.filter(i=>products.some(p=>p.id===i.id));localStorage.setItem("plugsyCart",JSON.stringify(cart));
+ $("cartCount").textContent=cart.reduce((s,i)=>s+i.quantity,0);
+ $("cartItems").innerHTML=cart.length?cart.map(i=>{const p=products.find(x=>x.id===i.id);return `<div class="cart-item"><div><strong>${esc(p.name)}</strong><br><span class="small">৳ ${money(priceOf(p))} each</span></div>
+ <div><button class="btn secondary" onclick="changeQuantity('${p.id}',-1)">−</button> <strong>${i.quantity}</strong> <button class="btn secondary" onclick="changeQuantity('${p.id}',1)">+</button> <button class="btn danger" onclick="removeCartItem('${p.id}')">Remove</button></div></div>`}).join(""):"Your cart is empty.";
+ const t=totals();$("subtotal").textContent=money(t.subtotal);$("discountTotal").textContent=money(t.discount);$("deliveryTotal").textContent=money(t.delivery);$("grandTotal").textContent=money(t.total);
 }
-
-function renderProducts() {
-  const area = document.getElementById("productList");
-
-  if (!products.length) {
-    area.innerHTML = '<p class="small">No products available yet. Admin can add products from the Admin Panel.</p>';
-    return;
-  }
-
-  area.innerHTML = products.map(p => {
-    const discount = effectiveDiscount(p);
-    const price = finalPrice(p);
-    const image = p.image || "https://placehold.co/500x350/152238/00e5ff?text=Plugsy+BD";
-
-    return `
-      <article class="product">
-        <img src="${escapeAttr(image)}" alt="${escapeAttr(p.name)}"
-             onerror="this.src='https://placehold.co/500x350/152238/00e5ff?text=Plugsy+BD'">
-        <div class="product-info">
-          <h3>${escapeHTML(p.name || "Product")}</h3>
-          <p class="price">৳ ${money(price)}
-            ${discount ? `<span class="old-price">৳ ${money(p.price)}</span>` : ""}
-          </p>
-          ${discount ? `<p class="discount-tag">${discount}% OFF</p>` : ""}
-          <p class="small">${escapeHTML(p.description || "")}</p>
-          <button class="btn" onclick="addToCart('${p.id}')">Add to Cart</button>
-        </div>
-      </article>`;
-  }).join("");
+async function placeOrder(){
+ const name=$("customerName").value.trim(),phone=$("customerPhone").value.trim(),address=$("customerAddress").value.trim(),msg=$("orderMessage"),btn=$("placeOrderBtn");
+ if(!cart.length){msg.textContent="Your cart is empty.";return}if(!name||!phone||!address){msg.textContent="Please fill in your name, phone and address.";return}
+ const t=totals(),items=cart.map(i=>{const p=products.find(x=>x.id===i.id);return{productId:p.id,name:p.name,price:priceOf(p),quantity:i.quantity}});
+ btn.disabled=true;msg.textContent="Submitting order...";
+ try{await db.collection("orders").add({customerName:name,customerPhone:phone,customerAddress:address,items,subtotal:t.subtotal,discount:t.discount,deliveryCharge:t.delivery,total:t.total,status:"New",createdAt:firebase.firestore.FieldValue.serverTimestamp()});
+ cart=[];saveCart();$("customerName").value="";$("customerPhone").value="";$("customerAddress").value="";msg.textContent="Order submitted successfully! We will contact you soon.";
+ }catch(e){console.error(e);msg.textContent="Order failed: "+e.message}finally{btn.disabled=false}
 }
-
-function escapeHTML(value) {
-  return String(value ?? "").replace(/[&<>"']/g, c => ({
-    "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#39;"
-  })[c]);
+async function adminLogin(){
+ const email=$("adminEmail").value.trim(),password=$("adminPassword").value;
+ try{const c=await auth.signInWithEmailAndPassword(email,password);if(c.user.uid!==ADMIN_UID){await auth.signOut();$("loginMessage").textContent="This account is not authorized as admin.";}}
+ catch(e){$("loginMessage").textContent="Login failed: "+e.message}
 }
-function escapeAttr(value) { return escapeHTML(value); }
-
-function addToCart(id) {
-  const product = products.find(p => p.id === id);
-  if (!product) return;
-
-  const existing = cart.find(item => item.id === id);
-  if (existing) existing.quantity += 1;
-  else cart.push({id, quantity: 1});
-
-  saveCart();
-}
-
-function saveCart() {
-  localStorage.setItem("plugsyCart", JSON.stringify(cart));
-  updateCart();
-}
-
-function changeQuantity(id, amount) {
-  const item = cart.find(x => x.id === id);
-  if (!item) return;
-  item.quantity += amount;
-  if (item.quantity <= 0) cart = cart.filter(x => x.id !== id);
-  saveCart();
-}
-
-function removeCartItem(id) {
-  cart = cart.filter(x => x.id !== id);
-  saveCart();
-}
-
-function calculateCart() {
-  let subtotal = 0;
-  let discountedTotal = 0;
-
-  cart.forEach(item => {
-    const p = products.find(x => x.id === item.id);
-    if (!p) return;
-    subtotal += Number(p.price) * item.quantity;
-    discountedTotal += finalPrice(p) * item.quantity;
-  });
-
-  const discount = subtotal - discountedTotal;
-  const delivery = cart.length ? Number(storeSettings.deliveryCharge || 0) : 0;
-
-  return {subtotal, discount, delivery, total: discountedTotal + delivery};
-}
-
-function updateCart() {
-  const area = document.getElementById("cartItems");
-  const validCart = cart.filter(item => products.some(p => p.id === item.id));
-  if (validCart.length !== cart.length) {
-    cart = validCart;
-    localStorage.setItem("plugsyCart", JSON.stringify(cart));
-  }
-
-  document.getElementById("cartCount").textContent =
-    cart.reduce((sum, item) => sum + item.quantity, 0);
-
-  if (!cart.length) {
-    area.innerHTML = "Your cart is empty.";
-  } else {
-    area.innerHTML = cart.map(item => {
-      const p = products.find(x => x.id === item.id);
-      if (!p) return "";
-      return `<div class="cart-item">
-        <div><strong>${escapeHTML(p.name)}</strong><br>
-        <span class="small">৳ ${money(finalPrice(p))} each</span></div>
-        <div>
-          <button class="btn secondary" onclick="changeQuantity('${p.id}',-1)">−</button>
-          <strong> ${item.quantity} </strong>
-          <button class="btn secondary" onclick="changeQuantity('${p.id}',1)">+</button>
-          <button class="btn danger" onclick="removeCartItem('${p.id}')">Remove</button>
-        </div>
-      </div>`;
-    }).join("");
-  }
-
-  const totals = calculateCart();
-  document.getElementById("subtotal").textContent = money(totals.subtotal);
-  document.getElementById("discountTotal").textContent = money(totals.discount);
-  document.getElementById("deliveryTotal").textContent = money(totals.delivery);
-  document.getElementById("grandTotal").textContent = money(totals.total);
-}
-
-async function placeOrder() {
-  const name = document.getElementById("customerName").value.trim();
-  const phone = document.getElementById("customerPhone").value.trim();
-  const address = document.getElementById("customerAddress").value.trim();
-  const message = document.getElementById("orderMessage");
-  const button = document.getElementById("placeOrderBtn");
-
-  if (!cart.length) return message.textContent = "Your cart is empty.";
-  if (!name || !phone || !address) return message.textContent = "Please fill in your name, phone and address.";
-
-  const totals = calculateCart();
-  const orderItems = cart.map(item => {
-    const p = products.find(x => x.id === item.id);
-    return {
-      productId: p.id,
-      name: p.name,
-      price: finalPrice(p),
-      quantity: item.quantity
-    };
-  });
-
-  button.disabled = true;
-  message.textContent = "Submitting your order...";
-
-  try {
-    await db.collection("orders").add({
-      customerName: name,
-      customerPhone: phone,
-      customerAddress: address,
-      items: orderItems,
-      subtotal: totals.subtotal,
-      discount: totals.discount,
-      deliveryCharge: totals.delivery,
-      total: totals.total,
-      status: "New",
-      createdAt: firebase.firestore.FieldValue.serverTimestamp()
-    });
-
-    cart = [];
-    saveCart();
-    document.getElementById("customerName").value = "";
-    document.getElementById("customerPhone").value = "";
-    document.getElementById("customerAddress").value = "";
-    message.textContent = "Order submitted successfully! We will contact you soon.";
-  } catch (error) {
-    console.error(error);
-    message.textContent = "Order failed. Please try again or contact the store.";
-  } finally {
-    button.disabled = false;
-  }
-}
-
-// Firebase Authentication: admin account is created in Firebase Console.
-async function adminLogin() {
-  const email = document.getElementById("adminEmail").value.trim();
-  const password = document.getElementById("adminPassword").value;
-  const msg = document.getElementById("loginMessage");
-
-  try {
-    await auth.signInWithEmailAndPassword(email, password);
-    msg.textContent = "Login successful.";
-  } catch (error) {
-    msg.textContent = "Login failed: " + error.message;
-  }
-}
-
-async function adminLogout() {
-  await auth.signOut();
-}
-
-auth.onAuthStateChanged(async user => {
-  isAdmin = false;
-
-  if (!user) {
-    document.getElementById("loginPanel").classList.remove("hidden");
-    document.getElementById("dashboard").classList.add("hidden");
-    return;
-  }
-
-  // Firestore security rules decide whether this account is an admin.
-  // Verify access by attempting to read the admin-only orders collection.
-  try {
-    await db.collection("orders").limit(1).get();
-    isAdmin = true;
-    document.getElementById("loginPanel").classList.add("hidden");
-    document.getElementById("dashboard").classList.remove("hidden");
-    document.getElementById("globalDiscount").value = storeSettings.globalDiscount || 0;
-    document.getElementById("deliveryCharge").value = storeSettings.deliveryCharge || 0;
-    renderAdminProducts();
-  } catch (error) {
-    await auth.signOut();
-    document.getElementById("loginMessage").textContent =
-      "This account does not have admin permission.";
-  }
+async function adminLogout(){await auth.signOut()}
+auth.onAuthStateChanged(user=>{
+ isAdmin=!!user&&user.uid===ADMIN_UID;
+ $("loginPanel").classList.toggle("hidden",isAdmin);$("dashboard").classList.toggle("hidden",!isAdmin);
+ if(isAdmin){$("globalDiscount").value=storeSettings.globalDiscount||0;$("deliveryCharge").value=storeSettings.deliveryCharge||0;renderAdminProducts()}
+ if(user&&!isAdmin){auth.signOut();$("loginMessage").textContent="This account is not authorized as admin."}
 });
-
-function showAdminTab(tab) {
-  ["productsTab","settingsTab","ordersTab"].forEach(id => {
-    document.getElementById(id).classList.toggle("hidden", id !== tab);
-  });
-  if (tab === "ordersTab") loadOrders();
+function showAdminTab(tab){["productsTab","settingsTab","ordersTab"].forEach(id=>$(id).classList.toggle("hidden",id!==tab));if(tab==="ordersTab")loadOrders()}
+async function saveProduct(){
+ if(!isAdmin){alert("Admin login required.");return}
+ const name=$("pName").value.trim(),image=$("pImage").value.trim(),price=Number($("pPrice").value),discount=Number($("pDiscount").value),description=$("pDescription").value.trim(),id=$("editProductId").value;
+ if(!name||!image||!Number.isFinite(price)||price<=0){alert("Enter product name, image URL and valid price.");return}
+ if(!/^https?:\/\//i.test(image)){alert("Image URL must start with https:// or http://");return}
+ if(discount<0||discount>100){alert("Discount must be between 0 and 100.");return}
+ const data={name,image,price,discount,description};
+ try{if(id)await db.collection("products").doc(id).update(data);else await db.collection("products").add({...data,createdAt:firebase.firestore.FieldValue.serverTimestamp()});clearProductForm();alert("Product saved. All visitors can see the update.")}
+ catch(e){alert("Could not save product: "+e.message)}
 }
-
-async function saveProduct() {
-  if (!isAdmin) return alert("Admin login required.");
-
-  const name = document.getElementById("pName").value.trim();
-  const image = document.getElementById("pImage").value.trim();
-  const price = Number(document.getElementById("pPrice").value);
-  const discount = Number(document.getElementById("pDiscount").value);
-  const description = document.getElementById("pDescription").value.trim();
-  const id = document.getElementById("editProductId").value;
-
-  if (!name || !image || !Number.isFinite(price) || price <= 0) {
-    return alert("Please enter product name, image URL and a valid price.");
-  }
-  if (discount < 0 || discount > 100) return alert("Discount must be between 0 and 100.");
-
-  const data = {name, image, price, discount, description};
-
-  try {
-    if (id) {
-      await db.collection("products").doc(id).update(data);
-    } else {
-      data.createdAt = firebase.firestore.FieldValue.serverTimestamp();
-      await db.collection("products").add(data);
-    }
-    clearProductForm();
-    alert("Product saved successfully.");
-  } catch (error) {
-    alert("Could not save product: " + error.message);
-  }
+function clearProductForm(){["editProductId","pName","pImage","pPrice","pDescription"].forEach(id=>$(id).value="");$("pDiscount").value=0;$("productFormTitle").textContent="Add New Product"}
+function renderAdminProducts(){
+ const a=$("adminProducts");if(!a)return;if(!products.length){a.innerHTML='<p class="small">No products added yet.</p>';return}
+ a.innerHTML=products.map(p=>`<div class="admin-product">${p.image?`<img src="${esc(p.image)}" alt="">`:""}<strong>${esc(p.name)}</strong><p class="small">Price: ৳ ${money(p.price)} | Discount: ${Number(p.discount)||0}%</p>
+ <div class="admin-actions"><button class="btn secondary" onclick="editProduct('${p.id}')">Edit</button><button class="btn danger" onclick="deleteProduct('${p.id}')">Delete</button></div><div style="clear:both"></div></div>`).join("");
 }
-
-function clearProductForm() {
-  ["editProductId","pName","pImage","pPrice","pDescription"].forEach(id => {
-    document.getElementById(id).value = "";
-  });
-  document.getElementById("pDiscount").value = 0;
-  document.getElementById("productFormTitle").textContent = "Add New Product";
+function editProduct(id){const p=products.find(x=>x.id===id);if(!p)return;$("editProductId").value=p.id;$("pName").value=p.name||"";$("pImage").value=p.image||"";$("pPrice").value=p.price||"";$("pDiscount").value=p.discount||0;$("pDescription").value=p.description||"";$("productFormTitle").textContent="Edit Product";$("productsTab").scrollIntoView({behavior:"smooth"})}
+async function deleteProduct(id){if(!isAdmin)return;if(!confirm("Are you sure you want to delete this product?"))return;try{await db.collection("products").doc(id).delete();cart=cart.filter(i=>i.id!==id);saveCart()}catch(e){alert("Delete failed: "+e.message)}}
+async function saveSettings(){
+ if(!isAdmin)return;const globalDiscount=Number($("globalDiscount").value),deliveryCharge=Number($("deliveryCharge").value);
+ if(globalDiscount<0||globalDiscount>100||deliveryCharge<0){alert("Enter valid discount and delivery charge.");return}
+ try{await db.collection("settings").doc("store").set({globalDiscount,deliveryCharge},{merge:true});alert("Settings updated for all customers.")}
+ catch(e){alert("Could not save settings: "+e.message)}
 }
-
-function renderAdminProducts() {
-  const area = document.getElementById("adminProducts");
-  if (!area) return;
-
-  if (!products.length) {
-    area.innerHTML = '<p class="small">No products added yet.</p>';
-    return;
-  }
-
-  area.innerHTML = products.map(p => `
-    <div class="admin-product">
-      <strong>${escapeHTML(p.name)}</strong>
-      <p class="small">Price: ৳ ${money(p.price)} | Discount: ${Number(p.discount)||0}%</p>
-      <div class="admin-actions">
-        <button class="btn secondary" onclick="editProduct('${p.id}')">Edit</button>
-        <button class="btn danger" onclick="deleteProduct('${p.id}')">Delete</button>
-      </div>
-    </div>`).join("");
+async function loadOrders(){
+ const a=$("ordersList");a.textContent="Loading orders...";if(!isAdmin){a.textContent="Admin login required.";return}
+ try{const s=await db.collection("orders").orderBy("createdAt","desc").limit(100).get();if(s.empty){a.textContent="No orders yet.";return}
+ a.innerHTML=s.docs.map(doc=>{const o=doc.data(),date=o.createdAt?.toDate?o.createdAt.toDate().toLocaleString():"Just now",items=(o.items||[]).map(i=>`${esc(i.name)} × ${i.quantity}`).join("<br>");
+ return `<div class="order-card"><strong>Order: ${doc.id}</strong><p class="small">${esc(date)}</p><p>Name: ${esc(o.customerName)}</p><p>Phone: ${esc(o.customerPhone)}</p><p>Address: ${esc(o.customerAddress)}</p><p style="margin:8px 0">${items}</p>
+ <p>Subtotal: ৳ ${money(o.subtotal)}</p><p>Discount: ৳ ${money(o.discount)}</p><p>Delivery: ৳ ${money(o.deliveryCharge)}</p><p><strong>Total: ৳ ${money(o.total)}</strong></p>
+ <label>Order Status</label><select id="status-${doc.id}">${["New","Confirmed","Processing","Shipped","Delivered","Cancelled"].map(x=>`<option ${o.status===x?"selected":""}>${x}</option>`).join("")}</select><button class="btn" onclick="updateOrderStatus('${doc.id}')">Update Status</button></div>`}).join("");
+ }catch(e){a.textContent="Could not load orders: "+e.message}
 }
-
-function editProduct(id) {
-  const p = products.find(x => x.id === id);
-  if (!p) return;
-
-  document.getElementById("editProductId").value = p.id;
-  document.getElementById("pName").value = p.name || "";
-  document.getElementById("pImage").value = p.image || "";
-  document.getElementById("pPrice").value = p.price || "";
-  document.getElementById("pDiscount").value = p.discount || 0;
-  document.getElementById("pDescription").value = p.description || "";
-  document.getElementById("productFormTitle").textContent = "Edit Product";
-  document.getElementById("productsTab").scrollIntoView({behavior:"smooth"});
-}
-
-async function deleteProduct(id) {
-  if (!isAdmin) return;
-  if (!confirm("Are you sure you want to delete this product?")) return;
-
-  try {
-    await db.collection("products").doc(id).delete();
-    cart = cart.filter(item => item.id !== id);
-    saveCart();
-  } catch (error) {
-    alert("Could not delete product: " + error.message);
-  }
-}
-
-async function saveSettings() {
-  if (!isAdmin) return;
-
-  const globalDiscount = Number(document.getElementById("globalDiscount").value);
-  const deliveryCharge = Number(document.getElementById("deliveryCharge").value);
-
-  if (globalDiscount < 0 || globalDiscount > 100 || deliveryCharge < 0) {
-    return alert("Enter a valid discount and delivery charge.");
-  }
-
-  try {
-    await db.collection("settings").doc("store").set({
-      globalDiscount,
-      deliveryCharge
-    }, {merge:true});
-    alert("Store settings updated for all customers.");
-  } catch (error) {
-    alert("Could not save settings: " + error.message);
-  }
-}
-
-async function loadOrders() {
-  const area = document.getElementById("ordersList");
-  area.textContent = "Loading orders...";
-
-  try {
-    const snapshot = await db.collection("orders")
-      .orderBy("createdAt", "desc").limit(100).get();
-
-    if (snapshot.empty) {
-      area.textContent = "No orders yet.";
-      return;
-    }
-
-    area.innerHTML = snapshot.docs.map(doc => {
-      const o = doc.data();
-      const date = o.createdAt ? o.createdAt.toDate().toLocaleString() : "Just now";
-      const items = (o.items || []).map(i =>
-        `${escapeHTML(i.name)} × ${i.quantity}`
-      ).join("<br>");
-
-      return `<div class="order-card">
-        <strong>Order: ${doc.id}</strong>
-        <p class="small">${escapeHTML(date)}</p>
-        <p>Name: ${escapeHTML(o.customerName)}</p>
-        <p>Phone: ${escapeHTML(o.customerPhone)}</p>
-        <p>Address: ${escapeHTML(o.customerAddress)}</p>
-        <p style="margin:8px 0">${items}</p>
-        <p>Subtotal: ৳ ${money(o.subtotal)}</p>
-        <p>Discount: ৳ ${money(o.discount)}</p>
-        <p>Delivery: ৳ ${money(o.deliveryCharge)}</p>
-        <p><strong>Total: ৳ ${money(o.total)}</strong></p>
-        <label>Order Status</label>
-        <select id="status-${doc.id}">
-          ${["New","Confirmed","Processing","Shipped","Delivered","Cancelled"].map(s =>
-            `<option ${o.status===s?"selected":""}>${s}</option>`
-          ).join("")}
-        </select>
-        <button class="btn" onclick="updateOrderStatus('${doc.id}')">Update Status</button>
-      </div>`;
-    }).join("");
-  } catch (error) {
-    area.textContent = "Could not load orders: " + error.message;
-  }
-}
-
-async function updateOrderStatus(id) {
-  if (!isAdmin) return;
-  const status = document.getElementById("status-" + id).value;
-
-  try {
-    await db.collection("orders").doc(id).update({status});
-    alert("Order status updated.");
-  } catch (error) {
-    alert("Could not update order: " + error.message);
-  }
-}
-
-// Start shared database listeners.
-listenProducts();
-listenSettings();
-updateCart();
+async function updateOrderStatus(id){if(!isAdmin)return;try{await db.collection("orders").doc(id).update({status:$("status-"+id).value});alert("Order status updated.")}catch(e){alert("Update failed: "+e.message)}}
+listenProducts();listenSettings();updateCart();
 </script>
-</body>
-</html>
-```
+</body></html>

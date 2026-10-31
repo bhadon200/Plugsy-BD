@@ -6,15 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#080b14">
 
-    <!-- Facebook Open Graph -->
+    <!-- Website SEO -->
+    <meta name="description" content="Discover the latest gadgets and technology products at Plugsy BD.">
+    <meta name="keywords" content="Plugsy BD, gadgets, electronics, smart watch, earbuds, technology">
+    <meta name="author" content="Bhadon Chandra Paul">
+
+    <!-- FACEBOOK OPEN GRAPH -->
     <meta property="fb:app_id" content="1939759096994051">
     <meta property="og:url" content="https://bhadon200.github.io/Plugsy-BD/">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Plugsy BD | Smart Gadget Store">
     <meta property="og:description" content="Discover the latest gadgets and technology products at Plugsy BD.">
     <meta property="og:image" content="https://bhadon200.github.io/Plugsy-BD/logo.png">
+    <meta property="og:image:secure_url" content="https://bhadon200.github.io/Plugsy-BD/logo.png">
     <meta property="og:image:type" content="image/png">
-    <meta property="og:image:alt" content="Plugsy BD Logo">
+    <meta property="og:image:alt" content="Plugsy BD Smart Gadget Store Logo">
+    <meta property="og:image:width" content="512">
+    <meta property="og:image:height" content="512">
 
     <title>Plugsy BD | Smart Gadget Store</title>
 
@@ -23,6 +31,10 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
@@ -213,21 +225,6 @@
             cursor: pointer;
         }
 
-        input, textarea {
-            width: 100%;
-            padding: 12px;
-            margin: 8px 0;
-            border: 1px solid #34445b;
-            border-radius: 6px;
-            background: #080b14;
-            color: white;
-        }
-
-        .order-form {
-            max-width: 500px;
-            margin: 20px auto;
-        }
-
         @media(max-width: 600px) {
             header {
                 justify-content: center;
@@ -254,6 +251,7 @@
 
 <header>
     <div class="logo">⚡ PLUGSY BD</div>
+
     <nav>
         <a href="#home">Home</a>
         <a href="#products">Products</a>
@@ -278,7 +276,7 @@
 <section class="section" id="products">
     <h2 class="section-title">Our <span>Products</span></h2>
 
-    <div class="products" id="product-list">
+    <div class="products">
 
         <div class="product">
             <img src="https://placehold.co/500x350/152238/00e5ff?text=Smart+Watch" alt="Smart Watch">
@@ -324,9 +322,11 @@
 
     <div class="cart-box">
         <div id="cart-items">Your cart is empty.</div>
+
         <h3 style="margin-top:20px;">
             Total: ৳ <span id="cart-total">0</span>
         </h3>
+
         <br>
         <button class="btn" onclick="checkout()">Order on WhatsApp</button>
     </div>
@@ -334,6 +334,7 @@
 
 <section class="section about" id="about">
     <h2 class="section-title">About <span>Plugsy BD</span></h2>
+
     <p>
         Plugsy BD is an online gadget store focused on bringing
         modern technology and useful electronic accessories to
@@ -427,7 +428,7 @@
         message += "\nTotal: Tk " + total;
         message += "\n\nPlease contact me about this order.";
 
-        // নিজের WhatsApp নম্বর বসাও: দেশের কোডসহ, + চিহ্ন ছাড়া
+        // নিজের WhatsApp নম্বর বসাও
         const whatsappNumber = "8801XXXXXXXXX";
 
         if (whatsappNumber.includes("X")) {

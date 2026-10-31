@@ -2,450 +2,665 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#080b14">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080b14">
 
-    <!-- Website SEO -->
-    <meta name="description" content="Discover the latest gadgets and technology products at Plugsy BD.">
-    <meta name="keywords" content="Plugsy BD, gadgets, electronics, smart watch, earbuds, technology">
-    <meta name="author" content="Bhadon Chandra Paul">
+<!-- Facebook Open Graph -->
+<meta property="fb:app_id" content="1939759096994051">
+<meta property="og:url" content="https://bhadon200.github.io/Plugsy-BD/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Plugsy BD | Smart Gadget Store">
+<meta property="og:description" content="Discover the latest gadgets and technology products at Plugsy BD.">
+<meta property="og:image" content="https://bhadon200.github.io/Plugsy-BD/logo.png">
+<meta property="og:image:secure_url" content="https://bhadon200.github.io/Plugsy-BD/logo.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:alt" content="Plugsy BD Logo">
 
-    <!-- FACEBOOK OPEN GRAPH -->
-    <meta property="fb:app_id" content="1939759096994051">
-    <meta property="og:url" content="https://bhadon200.github.io/Plugsy-BD/">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Plugsy BD | Smart Gadget Store">
-    <meta property="og:description" content="Discover the latest gadgets and technology products at Plugsy BD.">
-    <meta property="og:image" content="https://bhadon200.github.io/Plugsy-BD/logo.png">
-    <meta property="og:image:secure_url" content="https://bhadon200.github.io/Plugsy-BD/logo.png">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:image:alt" content="Plugsy BD Smart Gadget Store Logo">
-    <meta property="og:image:width" content="512">
-    <meta property="og:image:height" content="512">
+<title>Plugsy BD | Smart Gadget Store</title>
 
-    <title>Plugsy BD | Smart Gadget Store</title>
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background: #080b14;
-            color: white;
-        }
-
-        header {
-            background: #101827;
-            padding: 18px 7%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 15px;
-            border-bottom: 1px solid #263449;
-        }
-
-        .logo {
-            font-size: 26px;
-            font-weight: bold;
-            color: #00e5ff;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 18px;
-            font-size: 14px;
-        }
-
-        nav a:hover {
-            color: #00e5ff;
-        }
-
-        .hero {
-            min-height: 420px;
-            padding: 90px 7%;
-            display: flex;
-            align-items: center;
-            background:
-                radial-gradient(circle at 80% 30%, #123e55, transparent 35%),
-                linear-gradient(135deg, #101827, #080b14);
-        }
-
-        .hero-content {
-            max-width: 650px;
-        }
-
-        .hero h1 {
-            font-size: clamp(35px, 6vw, 60px);
-            margin-bottom: 20px;
-        }
-
-        .hero h1 span {
-            color: #00e5ff;
-        }
-
-        .hero p {
-            color: #b6c5d8;
-            line-height: 1.8;
-            margin-bottom: 25px;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 13px 24px;
-            background: #00cfe8;
-            color: #061018;
-            text-decoration: none;
-            border-radius: 7px;
-            font-weight: bold;
-            border: none;
-            cursor: pointer;
-        }
-
-        .btn:hover {
-            background: #00a9c5;
-        }
-
-        .section {
-            padding: 65px 7%;
-        }
-
-        .section-title {
-            font-size: 30px;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-
-        .section-title span {
-            color: #00e5ff;
-        }
-
-        .products {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 22px;
-        }
-
-        .product {
-            background: #111b2b;
-            border: 1px solid #263449;
-            border-radius: 12px;
-            overflow: hidden;
-            transition: 0.3s;
-        }
-
-        .product:hover {
-            transform: translateY(-6px);
-            border-color: #00e5ff;
-        }
-
-        .product img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            background: #1b293b;
-        }
-
-        .product-info {
-            padding: 18px;
-        }
-
-        .product h3 {
-            margin-bottom: 10px;
-        }
-
-        .price {
-            color: #00e5ff;
-            font-size: 20px;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
-
-        .product button {
-            width: 100%;
-        }
-
-        .about {
-            background: #101827;
-            text-align: center;
-            line-height: 1.8;
-        }
-
-        .about p {
-            max-width: 750px;
-            margin: auto;
-            color: #b6c5d8;
-        }
-
-        .contact {
-            text-align: center;
-            line-height: 2;
-        }
-
-        footer {
-            background: #05080f;
-            padding: 25px;
-            text-align: center;
-            color: #9aabba;
-            border-top: 1px solid #263449;
-        }
-
-        .cart-box {
-            background: #111b2b;
-            border: 1px solid #263449;
-            padding: 22px;
-            border-radius: 10px;
-            margin-top: 25px;
-        }
-
-        .cart-item {
-            display: flex;
-            justify-content: space-between;
-            gap: 12px;
-            padding: 12px 0;
-            border-bottom: 1px solid #263449;
-        }
-
-        .remove-btn {
-            background: #e74c3c;
-            color: white;
-            border: none;
-            padding: 5px 10px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        @media(max-width: 600px) {
-            header {
-                justify-content: center;
-                text-align: center;
-            }
-
-            nav a {
-                margin: 7px;
-                display: inline-block;
-            }
-
-            .hero {
-                padding: 65px 6%;
-            }
-
-            .section {
-                padding: 45px 6%;
-            }
-        }
-    </style>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;background:#080b14;color:#fff}
+header{background:#101827;padding:18px 6%;display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap;border-bottom:1px solid #263449}
+.logo{font-size:25px;font-weight:bold;color:#00e5ff}
+nav{display:flex;gap:16px;flex-wrap:wrap}
+nav a{color:white;text-decoration:none;font-size:14px}
+nav a:hover{color:#00e5ff}
+.hero{padding:85px 7%;min-height:390px;background:radial-gradient(circle at 80% 25%,#123e55,transparent 35%),linear-gradient(135deg,#101827,#080b14)}
+.hero h1{font-size:clamp(35px,6vw,60px);max-width:700px;margin-bottom:18px}
+.hero h1 span,.section-title span{color:#00e5ff}
+.hero p{color:#b6c5d8;line-height:1.8;max-width:620px;margin-bottom:24px}
+.btn{border:0;border-radius:7px;background:#00d5ed;color:#061018;padding:12px 18px;font-weight:bold;cursor:pointer;text-decoration:none;display:inline-block}
+.btn:hover{background:#00aeca}
+.btn.danger{background:#e74c3c;color:white}
+.btn.secondary{background:#34445b;color:white}
+.section{padding:55px 7%}
+.section-title{text-align:center;font-size:30px;margin-bottom:28px}
+.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.product,.panel,.cart-box{background:#111b2b;border:1px solid #263449;border-radius:12px;overflow:hidden}
+.product img{width:100%;height:190px;object-fit:cover;background:#1b293b}
+.product-info{padding:17px}
+.product-info h3{margin-bottom:10px}
+.price{color:#00e5ff;font-size:20px;font-weight:bold;margin:10px 0}
+.old-price{text-decoration:line-through;color:#8795a8;font-size:14px;margin-left:7px}
+.discount-tag{color:#8fffa8;font-size:13px;margin:5px 0}
+.product button{width:100%;margin-top:10px}
+.about{background:#101827;text-align:center;line-height:1.8;color:#bdc9d8}
+.about .section-title{color:white}
+.cart-box,.panel{padding:22px}
+.cart-item{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid #34445b}
+.total-line{display:flex;justify-content:space-between;margin:12px 0;color:#cbd5e1}
+.grand-total{font-size:22px;font-weight:bold;color:#00e5ff}
+input,textarea,select{width:100%;padding:12px;margin:7px 0 14px;background:#080b14;border:1px solid #34445b;border-radius:6px;color:white}
+label{font-size:14px;color:#cbd5e1}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.admin-area{background:#0c1422}
+.admin-actions{display:flex;gap:10px;flex-wrap:wrap;margin:15px 0}
+.admin-product,.order-card{padding:14px;border:1px solid #34445b;border-radius:8px;margin:10px 0;background:#0b1320}
+.hidden{display:none!important}
+.small{font-size:13px;color:#aab8ca;line-height:1.6}
+footer{text-align:center;padding:25px;background:#05080f;color:#9aabba}
+@media(max-width:600px){
+ header{justify-content:center;text-align:center}
+ nav{justify-content:center}
+ .hero{padding:60px 6%}
+ .section{padding:40px 6%}
+ .form-grid{grid-template-columns:1fr}
+ .cart-item{align-items:flex-start;flex-direction:column}
+}
+</style>
 </head>
 
 <body>
-
 <header>
-    <div class="logo">⚡ PLUGSY BD</div>
-
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#products">Products</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-        <a href="#cart">Cart (<span id="cart-count">0</span>)</a>
-    </nav>
+  <div class="logo">⚡ PLUGSY BD</div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#products">Products</a>
+    <a href="#about">About</a>
+    <a href="#cart">Cart (<span id="cartCount">0</span>)</a>
+    <a href="#contact">Contact</a>
+    <a href="#admin">Admin</a>
+  </nav>
 </header>
 
 <section class="hero" id="home">
-    <div class="hero-content">
-        <h1>Upgrade Your Life With <span>Smart Gadgets</span></h1>
-        <p>
-            Welcome to Plugsy BD. Discover the latest technology,
-            smart gadgets and accessories at affordable prices.
-            Your trusted destination for modern technology.
-        </p>
-        <a href="#products" class="btn">Explore Products</a>
-    </div>
+  <h1>Upgrade Your Life With <span>Smart Gadgets</span></h1>
+  <p>Discover the latest technology, smart gadgets and accessories at Plugsy BD. Quality products at affordable prices.</p>
+  <a class="btn" href="#products">Explore Products</a>
 </section>
 
 <section class="section" id="products">
-    <h2 class="section-title">Our <span>Products</span></h2>
-
-    <div class="products">
-
-        <div class="product">
-            <img src="https://placehold.co/500x350/152238/00e5ff?text=Smart+Watch" alt="Smart Watch">
-            <div class="product-info">
-                <h3>Smart Watch</h3>
-                <p class="price">৳ 1,500</p>
-                <button class="btn" onclick="addToCart('Smart Watch',1500)">Add to Cart</button>
-            </div>
-        </div>
-
-        <div class="product">
-            <img src="https://placehold.co/500x350/152238/00e5ff?text=Wireless+Earbuds" alt="Wireless Earbuds">
-            <div class="product-info">
-                <h3>Wireless Earbuds</h3>
-                <p class="price">৳ 1,200</p>
-                <button class="btn" onclick="addToCart('Wireless Earbuds',1200)">Add to Cart</button>
-            </div>
-        </div>
-
-        <div class="product">
-            <img src="https://placehold.co/500x350/152238/00e5ff?text=Bluetooth+Speaker" alt="Bluetooth Speaker">
-            <div class="product-info">
-                <h3>Bluetooth Speaker</h3>
-                <p class="price">৳ 950</p>
-                <button class="btn" onclick="addToCart('Bluetooth Speaker',950)">Add to Cart</button>
-            </div>
-        </div>
-
-        <div class="product">
-            <img src="https://placehold.co/500x350/152238/00e5ff?text=Power+Bank" alt="Power Bank">
-            <div class="product-info">
-                <h3>Power Bank</h3>
-                <p class="price">৳ 1,800</p>
-                <button class="btn" onclick="addToCart('Power Bank',1800)">Add to Cart</button>
-            </div>
-        </div>
-
-    </div>
+  <h2 class="section-title">Our <span>Products</span></h2>
+  <div id="productList" class="products">
+    <p class="small">Loading products...</p>
+  </div>
 </section>
 
 <section class="section" id="cart">
-    <h2 class="section-title">Your <span>Shopping Cart</span></h2>
+  <h2 class="section-title">Shopping <span>Cart</span></h2>
+  <div class="cart-box">
+    <div id="cartItems">Your cart is empty.</div>
+    <div class="total-line"><span>Subtotal</span><strong>৳ <span id="subtotal">0</span></strong></div>
+    <div class="total-line"><span>Discount</span><strong>৳ <span id="discountTotal">0</span></strong></div>
+    <div class="total-line"><span>Delivery Charge</span><strong>৳ <span id="deliveryTotal">0</span></strong></div>
+    <div class="total-line grand-total"><span>Total</span><span>৳ <span id="grandTotal">0</span></span></div>
 
-    <div class="cart-box">
-        <div id="cart-items">Your cart is empty.</div>
-
-        <h3 style="margin-top:20px;">
-            Total: ৳ <span id="cart-total">0</span>
-        </h3>
-
-        <br>
-        <button class="btn" onclick="checkout()">Order on WhatsApp</button>
-    </div>
+    <h3 style="margin:22px 0 12px">Customer Information</h3>
+    <label>Your Name</label>
+    <input id="customerName" placeholder="Enter your name">
+    <label>Phone Number</label>
+    <input id="customerPhone" placeholder="01XXXXXXXXX" inputmode="tel">
+    <label>Delivery Address</label>
+    <textarea id="customerAddress" rows="3" placeholder="Your full address"></textarea>
+    <button class="btn" id="placeOrderBtn" onclick="placeOrder()">Place Order</button>
+    <p class="small" id="orderMessage"></p>
+  </div>
 </section>
 
 <section class="section about" id="about">
-    <h2 class="section-title">About <span>Plugsy BD</span></h2>
-
-    <p>
-        Plugsy BD is an online gadget store focused on bringing
-        modern technology and useful electronic accessories to
-        customers. Our goal is to make shopping simple, convenient
-        and affordable.
-    </p>
+  <h2 class="section-title">About <span>Plugsy BD</span></h2>
+  <p>Plugsy BD is an online gadget store bringing modern technology and useful electronic accessories to customers. Our goal is to make shopping simple, convenient and affordable.</p>
 </section>
 
-<section class="section contact" id="contact">
-    <h2 class="section-title">Contact <span>Us</span></h2>
-    <p>Interested in our products? Contact us for orders and information.</p>
-    <p>Email: plugsybd@gmail.com</p>
-    <p>Location: Bangladesh</p>
+<section class="section" id="contact" style="text-align:center">
+  <h2 class="section-title">Contact <span>Us</span></h2>
+  <p>Email: plugsybd@gmail.com</p>
+  <p>Location: Bangladesh</p>
+</section>
+
+<section class="section admin-area" id="admin">
+  <h2 class="section-title">Admin <span>Panel</span></h2>
+
+  <div class="panel" id="loginPanel">
+    <h3>Admin Login</h3>
+    <p class="small">Sign in with the admin email and password created in Firebase Authentication.</p>
+    <label>Admin Email</label>
+    <input id="adminEmail" type="email" placeholder="Your admin email">
+    <label>Password</label>
+    <input id="adminPassword" type="password" placeholder="Your admin password">
+    <button class="btn" onclick="adminLogin()">Login</button>
+    <p id="loginMessage" class="small"></p>
+  </div>
+
+  <div class="panel hidden" id="dashboard">
+    <h3>Welcome, Admin</h3>
+    <div class="admin-actions">
+      <button class="btn secondary" onclick="showAdminTab('productsTab')">Manage Products</button>
+      <button class="btn secondary" onclick="showAdminTab('settingsTab')">Discount & Delivery</button>
+      <button class="btn secondary" onclick="showAdminTab('ordersTab')">Orders</button>
+      <button class="btn danger" onclick="adminLogout()">Logout</button>
+    </div>
+
+    <div id="productsTab">
+      <h3 id="productFormTitle">Add New Product</h3>
+      <input type="hidden" id="editProductId">
+      <label>Product Name</label>
+      <input id="pName" placeholder="Product name">
+      <label>Product Image URL</label>
+      <input id="pImage" placeholder="https://example.com/image.jpg">
+      <label>Price (৳)</label>
+      <input id="pPrice" type="number" min="0" placeholder="Product price">
+      <label>Product Discount (%)</label>
+      <input id="pDiscount" type="number" min="0" max="100" value="0">
+      <label>Description</label>
+      <textarea id="pDescription" rows="2" placeholder="Product details"></textarea>
+      <button class="btn" onclick="saveProduct()">Save Product</button>
+      <button class="btn secondary" onclick="clearProductForm()">Clear</button>
+      <h3 style="margin-top:25px">All Products</h3>
+      <div id="adminProducts"></div>
+    </div>
+
+    <div id="settingsTab" class="hidden">
+      <h3>Store Settings</h3>
+      <label>Global Discount (%)</label>
+      <input id="globalDiscount" type="number" min="0" max="100">
+      <label>Delivery Charge (৳)</label>
+      <input id="deliveryCharge" type="number" min="0">
+      <button class="btn" onclick="saveSettings()">Save Settings</button>
+      <p class="small">Global discount applies to products unless a product has its own discount.</p>
+    </div>
+
+    <div id="ordersTab" class="hidden">
+      <h3>Customer Orders</h3>
+      <div id="ordersList">Loading orders...</div>
+    </div>
+  </div>
 </section>
 
 <footer>
-    <p>© 2026 Plugsy BD. All Rights Reserved.</p>
-    <p>Designed with ❤️ for Technology Lovers</p>
+  <p>© 2026 Plugsy BD. All Rights Reserved.</p>
+  <p>Designed with ❤️ for Technology Lovers</p>
 </footer>
 
+<!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+
 <script>
-    let cart = JSON.parse(localStorage.getItem("plugsyCart")) || [];
+// 1. Replace these values with your Firebase Web App configuration.
+const firebaseConfig = {
+  apiKey: "PASTE_YOUR_API_KEY",
+  authDomain: "PASTE_YOUR_PROJECT_ID.firebaseapp.com",
+  projectId: "PASTE_YOUR_PROJECT_ID",
+  storageBucket: "PASTE_YOUR_PROJECT_ID.appspot.com",
+  messagingSenderId: "PASTE_YOUR_MESSAGING_SENDER_ID",
+  appId: "PASTE_YOUR_APP_ID"
+};
 
-    function saveCart() {
-        localStorage.setItem("plugsyCart", JSON.stringify(cart));
-        updateCart();
+firebase.initializeApp(firebaseConfig);
+
+const auth = firebase.auth();
+const db = firebase.firestore();
+
+let products = [];
+let cart = JSON.parse(localStorage.getItem("plugsyCart") || "[]");
+let storeSettings = {globalDiscount: 0, deliveryCharge: 0};
+let isAdmin = false;
+let unsubscribeProducts = null;
+let unsubscribeSettings = null;
+
+function money(n) {
+  return Math.round(Number(n) || 0).toLocaleString("en-BD");
+}
+
+function effectiveDiscount(product) {
+  if (Number(product.discount) > 0) return Number(product.discount);
+  return Number(storeSettings.globalDiscount) || 0;
+}
+
+function finalPrice(product) {
+  const price = Number(product.price) || 0;
+  return Math.round(price * (1 - effectiveDiscount(product) / 100));
+}
+
+// Live product updates: all customers see changes from Firestore.
+function listenProducts() {
+  if (unsubscribeProducts) unsubscribeProducts();
+
+  unsubscribeProducts = db.collection("products").orderBy("createdAt", "desc")
+    .onSnapshot(snapshot => {
+      products = snapshot.docs.map(doc => ({id: doc.id, ...doc.data()}));
+      renderProducts();
+      renderAdminProducts();
+      updateCart();
+    }, error => {
+      document.getElementById("productList").textContent =
+        "Could not load products. Check Firebase setup and Firestore rules.";
+      console.error(error);
+    });
+}
+
+function listenSettings() {
+  if (unsubscribeSettings) unsubscribeSettings();
+
+  unsubscribeSettings = db.collection("settings").doc("store")
+    .onSnapshot(doc => {
+      if (doc.exists) storeSettings = {...storeSettings, ...doc.data()};
+      renderProducts();
+      updateCart();
+
+      if (isAdmin) {
+        document.getElementById("globalDiscount").value = storeSettings.globalDiscount || 0;
+        document.getElementById("deliveryCharge").value = storeSettings.deliveryCharge || 0;
+      }
+    }, error => console.error(error));
+}
+
+function renderProducts() {
+  const area = document.getElementById("productList");
+
+  if (!products.length) {
+    area.innerHTML = '<p class="small">No products available yet. Admin can add products from the Admin Panel.</p>';
+    return;
+  }
+
+  area.innerHTML = products.map(p => {
+    const discount = effectiveDiscount(p);
+    const price = finalPrice(p);
+    const image = p.image || "https://placehold.co/500x350/152238/00e5ff?text=Plugsy+BD";
+
+    return `
+      <article class="product">
+        <img src="${escapeAttr(image)}" alt="${escapeAttr(p.name)}"
+             onerror="this.src='https://placehold.co/500x350/152238/00e5ff?text=Plugsy+BD'">
+        <div class="product-info">
+          <h3>${escapeHTML(p.name || "Product")}</h3>
+          <p class="price">৳ ${money(price)}
+            ${discount ? `<span class="old-price">৳ ${money(p.price)}</span>` : ""}
+          </p>
+          ${discount ? `<p class="discount-tag">${discount}% OFF</p>` : ""}
+          <p class="small">${escapeHTML(p.description || "")}</p>
+          <button class="btn" onclick="addToCart('${p.id}')">Add to Cart</button>
+        </div>
+      </article>`;
+  }).join("");
+}
+
+function escapeHTML(value) {
+  return String(value ?? "").replace(/[&<>"']/g, c => ({
+    "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#39;"
+  })[c]);
+}
+function escapeAttr(value) { return escapeHTML(value); }
+
+function addToCart(id) {
+  const product = products.find(p => p.id === id);
+  if (!product) return;
+
+  const existing = cart.find(item => item.id === id);
+  if (existing) existing.quantity += 1;
+  else cart.push({id, quantity: 1});
+
+  saveCart();
+}
+
+function saveCart() {
+  localStorage.setItem("plugsyCart", JSON.stringify(cart));
+  updateCart();
+}
+
+function changeQuantity(id, amount) {
+  const item = cart.find(x => x.id === id);
+  if (!item) return;
+  item.quantity += amount;
+  if (item.quantity <= 0) cart = cart.filter(x => x.id !== id);
+  saveCart();
+}
+
+function removeCartItem(id) {
+  cart = cart.filter(x => x.id !== id);
+  saveCart();
+}
+
+function calculateCart() {
+  let subtotal = 0;
+  let discountedTotal = 0;
+
+  cart.forEach(item => {
+    const p = products.find(x => x.id === item.id);
+    if (!p) return;
+    subtotal += Number(p.price) * item.quantity;
+    discountedTotal += finalPrice(p) * item.quantity;
+  });
+
+  const discount = subtotal - discountedTotal;
+  const delivery = cart.length ? Number(storeSettings.deliveryCharge || 0) : 0;
+
+  return {subtotal, discount, delivery, total: discountedTotal + delivery};
+}
+
+function updateCart() {
+  const area = document.getElementById("cartItems");
+  const validCart = cart.filter(item => products.some(p => p.id === item.id));
+  if (validCart.length !== cart.length) {
+    cart = validCart;
+    localStorage.setItem("plugsyCart", JSON.stringify(cart));
+  }
+
+  document.getElementById("cartCount").textContent =
+    cart.reduce((sum, item) => sum + item.quantity, 0);
+
+  if (!cart.length) {
+    area.innerHTML = "Your cart is empty.";
+  } else {
+    area.innerHTML = cart.map(item => {
+      const p = products.find(x => x.id === item.id);
+      if (!p) return "";
+      return `<div class="cart-item">
+        <div><strong>${escapeHTML(p.name)}</strong><br>
+        <span class="small">৳ ${money(finalPrice(p))} each</span></div>
+        <div>
+          <button class="btn secondary" onclick="changeQuantity('${p.id}',-1)">−</button>
+          <strong> ${item.quantity} </strong>
+          <button class="btn secondary" onclick="changeQuantity('${p.id}',1)">+</button>
+          <button class="btn danger" onclick="removeCartItem('${p.id}')">Remove</button>
+        </div>
+      </div>`;
+    }).join("");
+  }
+
+  const totals = calculateCart();
+  document.getElementById("subtotal").textContent = money(totals.subtotal);
+  document.getElementById("discountTotal").textContent = money(totals.discount);
+  document.getElementById("deliveryTotal").textContent = money(totals.delivery);
+  document.getElementById("grandTotal").textContent = money(totals.total);
+}
+
+async function placeOrder() {
+  const name = document.getElementById("customerName").value.trim();
+  const phone = document.getElementById("customerPhone").value.trim();
+  const address = document.getElementById("customerAddress").value.trim();
+  const message = document.getElementById("orderMessage");
+  const button = document.getElementById("placeOrderBtn");
+
+  if (!cart.length) return message.textContent = "Your cart is empty.";
+  if (!name || !phone || !address) return message.textContent = "Please fill in your name, phone and address.";
+
+  const totals = calculateCart();
+  const orderItems = cart.map(item => {
+    const p = products.find(x => x.id === item.id);
+    return {
+      productId: p.id,
+      name: p.name,
+      price: finalPrice(p),
+      quantity: item.quantity
+    };
+  });
+
+  button.disabled = true;
+  message.textContent = "Submitting your order...";
+
+  try {
+    await db.collection("orders").add({
+      customerName: name,
+      customerPhone: phone,
+      customerAddress: address,
+      items: orderItems,
+      subtotal: totals.subtotal,
+      discount: totals.discount,
+      deliveryCharge: totals.delivery,
+      total: totals.total,
+      status: "New",
+      createdAt: firebase.firestore.FieldValue.serverTimestamp()
+    });
+
+    cart = [];
+    saveCart();
+    document.getElementById("customerName").value = "";
+    document.getElementById("customerPhone").value = "";
+    document.getElementById("customerAddress").value = "";
+    message.textContent = "Order submitted successfully! We will contact you soon.";
+  } catch (error) {
+    console.error(error);
+    message.textContent = "Order failed. Please try again or contact the store.";
+  } finally {
+    button.disabled = false;
+  }
+}
+
+// Firebase Authentication: admin account is created in Firebase Console.
+async function adminLogin() {
+  const email = document.getElementById("adminEmail").value.trim();
+  const password = document.getElementById("adminPassword").value;
+  const msg = document.getElementById("loginMessage");
+
+  try {
+    await auth.signInWithEmailAndPassword(email, password);
+    msg.textContent = "Login successful.";
+  } catch (error) {
+    msg.textContent = "Login failed: " + error.message;
+  }
+}
+
+async function adminLogout() {
+  await auth.signOut();
+}
+
+auth.onAuthStateChanged(async user => {
+  isAdmin = false;
+
+  if (!user) {
+    document.getElementById("loginPanel").classList.remove("hidden");
+    document.getElementById("dashboard").classList.add("hidden");
+    return;
+  }
+
+  // Firestore security rules decide whether this account is an admin.
+  // Verify access by attempting to read the admin-only orders collection.
+  try {
+    await db.collection("orders").limit(1).get();
+    isAdmin = true;
+    document.getElementById("loginPanel").classList.add("hidden");
+    document.getElementById("dashboard").classList.remove("hidden");
+    document.getElementById("globalDiscount").value = storeSettings.globalDiscount || 0;
+    document.getElementById("deliveryCharge").value = storeSettings.deliveryCharge || 0;
+    renderAdminProducts();
+  } catch (error) {
+    await auth.signOut();
+    document.getElementById("loginMessage").textContent =
+      "This account does not have admin permission.";
+  }
+});
+
+function showAdminTab(tab) {
+  ["productsTab","settingsTab","ordersTab"].forEach(id => {
+    document.getElementById(id).classList.toggle("hidden", id !== tab);
+  });
+  if (tab === "ordersTab") loadOrders();
+}
+
+async function saveProduct() {
+  if (!isAdmin) return alert("Admin login required.");
+
+  const name = document.getElementById("pName").value.trim();
+  const image = document.getElementById("pImage").value.trim();
+  const price = Number(document.getElementById("pPrice").value);
+  const discount = Number(document.getElementById("pDiscount").value);
+  const description = document.getElementById("pDescription").value.trim();
+  const id = document.getElementById("editProductId").value;
+
+  if (!name || !image || !Number.isFinite(price) || price <= 0) {
+    return alert("Please enter product name, image URL and a valid price.");
+  }
+  if (discount < 0 || discount > 100) return alert("Discount must be between 0 and 100.");
+
+  const data = {name, image, price, discount, description};
+
+  try {
+    if (id) {
+      await db.collection("products").doc(id).update(data);
+    } else {
+      data.createdAt = firebase.firestore.FieldValue.serverTimestamp();
+      await db.collection("products").add(data);
+    }
+    clearProductForm();
+    alert("Product saved successfully.");
+  } catch (error) {
+    alert("Could not save product: " + error.message);
+  }
+}
+
+function clearProductForm() {
+  ["editProductId","pName","pImage","pPrice","pDescription"].forEach(id => {
+    document.getElementById(id).value = "";
+  });
+  document.getElementById("pDiscount").value = 0;
+  document.getElementById("productFormTitle").textContent = "Add New Product";
+}
+
+function renderAdminProducts() {
+  const area = document.getElementById("adminProducts");
+  if (!area) return;
+
+  if (!products.length) {
+    area.innerHTML = '<p class="small">No products added yet.</p>';
+    return;
+  }
+
+  area.innerHTML = products.map(p => `
+    <div class="admin-product">
+      <strong>${escapeHTML(p.name)}</strong>
+      <p class="small">Price: ৳ ${money(p.price)} | Discount: ${Number(p.discount)||0}%</p>
+      <div class="admin-actions">
+        <button class="btn secondary" onclick="editProduct('${p.id}')">Edit</button>
+        <button class="btn danger" onclick="deleteProduct('${p.id}')">Delete</button>
+      </div>
+    </div>`).join("");
+}
+
+function editProduct(id) {
+  const p = products.find(x => x.id === id);
+  if (!p) return;
+
+  document.getElementById("editProductId").value = p.id;
+  document.getElementById("pName").value = p.name || "";
+  document.getElementById("pImage").value = p.image || "";
+  document.getElementById("pPrice").value = p.price || "";
+  document.getElementById("pDiscount").value = p.discount || 0;
+  document.getElementById("pDescription").value = p.description || "";
+  document.getElementById("productFormTitle").textContent = "Edit Product";
+  document.getElementById("productsTab").scrollIntoView({behavior:"smooth"});
+}
+
+async function deleteProduct(id) {
+  if (!isAdmin) return;
+  if (!confirm("Are you sure you want to delete this product?")) return;
+
+  try {
+    await db.collection("products").doc(id).delete();
+    cart = cart.filter(item => item.id !== id);
+    saveCart();
+  } catch (error) {
+    alert("Could not delete product: " + error.message);
+  }
+}
+
+async function saveSettings() {
+  if (!isAdmin) return;
+
+  const globalDiscount = Number(document.getElementById("globalDiscount").value);
+  const deliveryCharge = Number(document.getElementById("deliveryCharge").value);
+
+  if (globalDiscount < 0 || globalDiscount > 100 || deliveryCharge < 0) {
+    return alert("Enter a valid discount and delivery charge.");
+  }
+
+  try {
+    await db.collection("settings").doc("store").set({
+      globalDiscount,
+      deliveryCharge
+    }, {merge:true});
+    alert("Store settings updated for all customers.");
+  } catch (error) {
+    alert("Could not save settings: " + error.message);
+  }
+}
+
+async function loadOrders() {
+  const area = document.getElementById("ordersList");
+  area.textContent = "Loading orders...";
+
+  try {
+    const snapshot = await db.collection("orders")
+      .orderBy("createdAt", "desc").limit(100).get();
+
+    if (snapshot.empty) {
+      area.textContent = "No orders yet.";
+      return;
     }
 
-    function addToCart(name, price) {
-        cart.push({name, price});
-        saveCart();
-        alert(name + " added to cart!");
-    }
+    area.innerHTML = snapshot.docs.map(doc => {
+      const o = doc.data();
+      const date = o.createdAt ? o.createdAt.toDate().toLocaleString() : "Just now";
+      const items = (o.items || []).map(i =>
+        `${escapeHTML(i.name)} × ${i.quantity}`
+      ).join("<br>");
 
-    function removeItem(index) {
-        cart.splice(index, 1);
-        saveCart();
-    }
+      return `<div class="order-card">
+        <strong>Order: ${doc.id}</strong>
+        <p class="small">${escapeHTML(date)}</p>
+        <p>Name: ${escapeHTML(o.customerName)}</p>
+        <p>Phone: ${escapeHTML(o.customerPhone)}</p>
+        <p>Address: ${escapeHTML(o.customerAddress)}</p>
+        <p style="margin:8px 0">${items}</p>
+        <p>Subtotal: ৳ ${money(o.subtotal)}</p>
+        <p>Discount: ৳ ${money(o.discount)}</p>
+        <p>Delivery: ৳ ${money(o.deliveryCharge)}</p>
+        <p><strong>Total: ৳ ${money(o.total)}</strong></p>
+        <label>Order Status</label>
+        <select id="status-${doc.id}">
+          ${["New","Confirmed","Processing","Shipped","Delivered","Cancelled"].map(s =>
+            `<option ${o.status===s?"selected":""}>${s}</option>`
+          ).join("")}
+        </select>
+        <button class="btn" onclick="updateOrderStatus('${doc.id}')">Update Status</button>
+      </div>`;
+    }).join("");
+  } catch (error) {
+    area.textContent = "Could not load orders: " + error.message;
+  }
+}
 
-    function updateCart() {
-        const cartItems = document.getElementById("cart-items");
-        const cartTotal = document.getElementById("cart-total");
-        const cartCount = document.getElementById("cart-count");
+async function updateOrderStatus(id) {
+  if (!isAdmin) return;
+  const status = document.getElementById("status-" + id).value;
 
-        cartCount.textContent = cart.length;
+  try {
+    await db.collection("orders").doc(id).update({status});
+    alert("Order status updated.");
+  } catch (error) {
+    alert("Could not update order: " + error.message);
+  }
+}
 
-        if (cart.length === 0) {
-            cartItems.textContent = "Your cart is empty.";
-            cartTotal.textContent = "0";
-            return;
-        }
-
-        let total = 0;
-        cartItems.innerHTML = "";
-
-        cart.forEach((item, index) => {
-            total += item.price;
-
-            const div = document.createElement("div");
-            div.className = "cart-item";
-
-            const name = document.createElement("span");
-            name.textContent = item.name + " - ৳ " + item.price;
-
-            const remove = document.createElement("button");
-            remove.className = "remove-btn";
-            remove.textContent = "Remove";
-            remove.onclick = () => removeItem(index);
-
-            div.append(name, remove);
-            cartItems.appendChild(div);
-        });
-
-        cartTotal.textContent = total;
-    }
-
-    function checkout() {
-        if (cart.length === 0) {
-            alert("Your cart is empty!");
-            return;
-        }
-
-        let message = "Hello Plugsy BD! I want to order:\n\n";
-        let total = 0;
-
-        cart.forEach(item => {
-            message += item.name + " - Tk " + item.price + "\n";
-            total += item.price;
-        });
-
-        message += "\nTotal: Tk " + total;
-        message += "\n\nPlease contact me about this order.";
-
-        // নিজের WhatsApp নম্বর বসাও
-        const whatsappNumber = "8801XXXXXXXXX";
-
-        if (whatsappNumber.includes("X")) {
-            alert("Please add your WhatsApp number in the website code first.");
-            return;
-        }
-
-        window.open(
-            "https://wa.me/" + whatsappNumber + "?text=" +
-            encodeURIComponent(message),
-            "_blank"
-        );
-    }
-
-    updateCart();
+// Start shared database listeners.
+listenProducts();
+listenSettings();
+updateCart();
 </script>
-
 </body>
 </html>
 ```

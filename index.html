@@ -1,12 +1,12 @@
-
+```html
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#080b14">
 
-    <!-- Facebook Open Graph Meta Tags -->
+    <!-- Facebook Open Graph -->
     <meta property="fb:app_id" content="1939759096994051">
     <meta property="og:url" content="https://bhadon200.github.io/Plugsy-BD/">
     <meta property="og:type" content="website">
@@ -14,376 +14,437 @@
     <meta property="og:description" content="Discover the latest gadgets and technology products at Plugsy BD.">
     <meta property="og:image" content="https://bhadon200.github.io/Plugsy-BD/logo.png">
     <meta property="og:image:type" content="image/png">
+    <meta property="og:image:alt" content="Plugsy BD Logo">
 
     <title>Plugsy BD | Smart Gadget Store</title>
 
     <style>
-    :root{--bg:#080b14;--panel:#111827;--text:#f4f7fb;--muted:#9aa8bd;--cyan:#00e5ff;--purple:#8b5cf6;--line:#253148}
-    *{box-sizing:border-box}
-    body{margin:0;background:radial-gradient(circle at 10% 0%,#15213c,transparent 35%),radial-gradient(circle at 90% 10%,#241342,transparent 30%),var(--bg);color:var(--text);font-family:system-ui,sans-serif}
-    button,input,select,textarea{font:inherit}
-    button{cursor:pointer;border:0}
-    .container{width:min(1160px,92%);margin:auto}
-    header{position:sticky;top:0;z-index:20;background:#080b14ef;border-bottom:1px solid var(--line);backdrop-filter:blur(14px)}
-    .nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:16px}
-    .brand{font-size:22px;font-weight:900}
-    .brand span{color:var(--cyan)}
-    .nav-actions{display:flex;gap:9px;align-items:center}
-    .btn{padding:11px 16px;border-radius:12px;background:linear-gradient(110deg,var(--cyan),#8b5cf6);color:#06101a;font-weight:800}
-    .btn.secondary{background:#172238;color:var(--text);border:1px solid var(--line)}
-    .btn.danger{background:#3b1724;color:#fecdd3}
-    .btn.small{padding:8px 11px;font-size:13px}
-    .hero{padding:76px 0 54px;text-align:center}
-    .eyebrow{color:var(--cyan);font-weight:800;letter-spacing:2px;text-transform:uppercase;font-size:12px}
-    .hero h1{font-size:clamp(34px,6vw,64px);line-height:1.08;margin:14px auto;max-width:850px}
-    .gradient{background:linear-gradient(90deg,var(--cyan),#b69aff);-webkit-background-clip:text;background-clip:text;color:transparent}
-    .hero p{color:var(--muted);max-width:620px;margin:0 auto 24px;line-height:1.8}
-    .hero-actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
-    .toolbar{display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:space-between;margin:22px 0}
-    .search{flex:1;min-width:210px}
-    .field{width:100%;background:#0b1220;border:1px solid var(--line);border-radius:11px;color:var(--text);padding:12px 13px;outline:none}
-    .field:focus{border-color:var(--cyan)}
-    .toolbar select{max-width:190px}
-    .section-title{display:flex;align-items:end;justify-content:space-between;gap:12px;margin:30px 0 18px}
-    .section-title h2{margin:0;font-size:27px}
-    .muted{color:var(--muted)}
-    .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:17px}
-    .product{background:linear-gradient(160deg,#151f32,#0c1220);border:1px solid var(--line);border-radius:18px;overflow:hidden;transition:.2s;display:flex;flex-direction:column}
-    .product:hover{transform:translateY(-4px);border-color:#00e5ff88}
-    .product img{width:100%;height:190px;object-fit:cover;background:#172238}
-    .product-body{padding:15px;display:flex;flex-direction:column;flex:1}
-    .product h3{margin:0 0 7px;font-size:17px}
-    .desc{font-size:13px;color:var(--muted);line-height:1.5;min-height:38px}
-    .price-line{display:flex;align-items:center;gap:8px;margin:12px 0}
-    .price{font-size:20px;font-weight:900;color:var(--cyan)}
-    .old{color:#7f8ca2;text-decoration:line-through;font-size:13px}
-    .discount{font-size:11px;background:#3b1730;color:#f9a8d4;padding:4px 7px;border-radius:7px}
-    .product .btn{width:100%;margin-top:auto}
-    .empty{padding:45px 15px;text-align:center;border:1px dashed var(--line);border-radius:16px;color:var(--muted);grid-column:1/-1}
-    footer{border-top:1px solid var(--line);margin-top:70px;padding:30px 0;color:var(--muted);text-align:center;font-size:13px}
-    .overlay{display:none;position:fixed;inset:0;background:#000b;z-index:50;align-items:center;justify-content:center;padding:15px}
-    .overlay.show{display:flex}
-    .modal{width:min(680px,100%);max-height:92vh;overflow:auto;background:#101827;border:1px solid #334155;border-radius:18px;padding:22px}
-    .modal-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:16px}
-    .modal-head h2{margin:0}
-    .close{background:#263349;color:white;border-radius:9px;padding:7px 11px}
-    .cart-row{display:grid;grid-template-columns:1fr auto;gap:12px;border-bottom:1px solid var(--line);padding:12px 0}
-    .qty{display:flex;gap:8px;align-items:center}
-    .qty button{background:#263349;color:white;border-radius:7px;padding:5px 9px}
-    .total{display:flex;justify-content:space-between;padding:8px 0}
-    .total.grand{font-size:19px;font-weight:900;color:var(--cyan);border-top:1px solid var(--line);margin-top:8px;padding-top:15px}
-    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-    .form-group{margin:10px 0}
-    .form-group label{display:block;font-size:13px;color:#cbd5e1;margin-bottom:6px}
-    .form-group.full{grid-column:1/-1}
-    .admin-tabs{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 18px}
-    .admin-tabs button{background:#1c2940;color:white;border:1px solid var(--line);border-radius:9px;padding:9px 12px}
-    .admin-tabs button.active{border-color:var(--cyan);color:var(--cyan)}
-    .admin-list{display:grid;gap:9px}
-    .admin-item{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:11px;background:#0b1220;border:1px solid var(--line);border-radius:11px}
-    .admin-item small{display:block;color:var(--muted)}
-    .notice{background:#332914;border:1px solid #8a6524;color:#fde68a;padding:12px;border-radius:11px;font-size:13px;line-height:1.6;margin:12px 0}
-    @media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
-    @media(max-width:560px){
-    .nav{height:64px}.brand{font-size:18px}.nav-actions .admin-label{display:none}
-    .hero{padding:55px 0 35px}.grid{grid-template-columns:repeat(2,1fr);gap:10px}
-    .product img{height:135px}.product-body{padding:11px}
-    .product h3{font-size:14px}.desc{font-size:12px}.price{font-size:17px}
-    .btn{padding:10px 12px}.form-grid{grid-template-columns:1fr}
-    .form-group.full{grid-column:auto}.modal{padding:16px}
-    }
-    @media(max-width:360px){.grid{grid-template-columns:1fr}}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #080b14;
+            color: white;
+        }
+
+        header {
+            background: #101827;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            border-bottom: 1px solid #263449;
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: bold;
+            color: #00e5ff;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 18px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #00e5ff;
+        }
+
+        .hero {
+            min-height: 420px;
+            padding: 90px 7%;
+            display: flex;
+            align-items: center;
+            background:
+                radial-gradient(circle at 80% 30%, #123e55, transparent 35%),
+                linear-gradient(135deg, #101827, #080b14);
+        }
+
+        .hero-content {
+            max-width: 650px;
+        }
+
+        .hero h1 {
+            font-size: clamp(35px, 6vw, 60px);
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #00e5ff;
+        }
+
+        .hero p {
+            color: #b6c5d8;
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 24px;
+            background: #00cfe8;
+            color: #061018;
+            text-decoration: none;
+            border-radius: 7px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #00a9c5;
+        }
+
+        .section {
+            padding: 65px 7%;
+        }
+
+        .section-title {
+            font-size: 30px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .section-title span {
+            color: #00e5ff;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 22px;
+        }
+
+        .product {
+            background: #111b2b;
+            border: 1px solid #263449;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .product:hover {
+            transform: translateY(-6px);
+            border-color: #00e5ff;
+        }
+
+        .product img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background: #1b293b;
+        }
+
+        .product-info {
+            padding: 18px;
+        }
+
+        .product h3 {
+            margin-bottom: 10px;
+        }
+
+        .price {
+            color: #00e5ff;
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .product button {
+            width: 100%;
+        }
+
+        .about {
+            background: #101827;
+            text-align: center;
+            line-height: 1.8;
+        }
+
+        .about p {
+            max-width: 750px;
+            margin: auto;
+            color: #b6c5d8;
+        }
+
+        .contact {
+            text-align: center;
+            line-height: 2;
+        }
+
+        footer {
+            background: #05080f;
+            padding: 25px;
+            text-align: center;
+            color: #9aabba;
+            border-top: 1px solid #263449;
+        }
+
+        .cart-box {
+            background: #111b2b;
+            border: 1px solid #263449;
+            padding: 22px;
+            border-radius: 10px;
+            margin-top: 25px;
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            padding: 12px 0;
+            border-bottom: 1px solid #263449;
+        }
+
+        .remove-btn {
+            background: #e74c3c;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border: 1px solid #34445b;
+            border-radius: 6px;
+            background: #080b14;
+            color: white;
+        }
+
+        .order-form {
+            max-width: 500px;
+            margin: 20px auto;
+        }
+
+        @media(max-width: 600px) {
+            header {
+                justify-content: center;
+                text-align: center;
+            }
+
+            nav a {
+                margin: 7px;
+                display: inline-block;
+            }
+
+            .hero {
+                padding: 65px 6%;
+            }
+
+            .section {
+                padding: 45px 6%;
+            }
+        }
     </style>
 </head>
+
 <body>
 
 <header>
-<div class="container nav">
- <div class="brand">PLUGSY <span>BD.</span></div>
- <div class="nav-actions">
-  <button class="btn secondary" onclick="openCart()">🛒 Cart <span id="cartCount">0</span></button>
-  <button class="btn small" onclick="openAdmin()"><span class="admin-label">Admin Panel </span>⚙</button>
- </div>
-</div>
+    <div class="logo">⚡ PLUGSY BD</div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="#cart">Cart (<span id="cart-count">0</span>)</a>
+    </nav>
 </header>
 
-<main class="container">
-<section class="hero">
- <div class="eyebrow">SMART GADGET STORE • BANGLADESH</div>
- <h1>Upgrade Your Life With <span class="gradient">Smart Gadgets</span></h1>
- <p>আপনার পছন্দের স্মার্ট গ্যাজেট কিনুন সহজে। মানসম্মত পণ্য, আকর্ষণীয় দাম এবং সহজ অর্ডার সুবিধা—সব এক জায়গায়।</p>
- <div class="hero-actions">
-  <a class="btn" href="#products" style="text-decoration:none">Shop Now ↘</a>
-  <a class="btn secondary" href="https://www.facebook.com/share/1DBzxjbHqj/?mibextid=wwXIfr" target="_blank" rel="noopener">Facebook Page</a>
- </div>
+<section class="hero" id="home">
+    <div class="hero-content">
+        <h1>Upgrade Your Life With <span>Smart Gadgets</span></h1>
+        <p>
+            Welcome to Plugsy BD. Discover the latest technology,
+            smart gadgets and accessories at affordable prices.
+            Your trusted destination for modern technology.
+        </p>
+        <a href="#products" class="btn">Explore Products</a>
+    </div>
 </section>
 
-<section id="products">
- <div class="section-title">
-  <div><div class="eyebrow">OUR COLLECTION</div><h2>Featured Products</h2></div>
-  <span class="muted" id="productCount"></span>
- </div>
- <div class="toolbar">
-  <div class="search"><input class="field" id="search" placeholder="পণ্য খুঁজুন..." oninput="renderProducts()"></div>
-  <select class="field" id="sort" onchange="renderProducts()">
-   <option value="default">Sort: Default</option>
-   <option value="low">Price: Low to High</option>
-   <option value="high">Price: High to Low</option>
-  </select>
- </div>
- <div class="grid" id="productGrid"></div>
+<section class="section" id="products">
+    <h2 class="section-title">Our <span>Products</span></h2>
+
+    <div class="products" id="product-list">
+
+        <div class="product">
+            <img src="https://placehold.co/500x350/152238/00e5ff?text=Smart+Watch" alt="Smart Watch">
+            <div class="product-info">
+                <h3>Smart Watch</h3>
+                <p class="price">৳ 1,500</p>
+                <button class="btn" onclick="addToCart('Smart Watch',1500)">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <img src="https://placehold.co/500x350/152238/00e5ff?text=Wireless+Earbuds" alt="Wireless Earbuds">
+            <div class="product-info">
+                <h3>Wireless Earbuds</h3>
+                <p class="price">৳ 1,200</p>
+                <button class="btn" onclick="addToCart('Wireless Earbuds',1200)">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <img src="https://placehold.co/500x350/152238/00e5ff?text=Bluetooth+Speaker" alt="Bluetooth Speaker">
+            <div class="product-info">
+                <h3>Bluetooth Speaker</h3>
+                <p class="price">৳ 950</p>
+                <button class="btn" onclick="addToCart('Bluetooth Speaker',950)">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <img src="https://placehold.co/500x350/152238/00e5ff?text=Power+Bank" alt="Power Bank">
+            <div class="product-info">
+                <h3>Power Bank</h3>
+                <p class="price">৳ 1,800</p>
+                <button class="btn" onclick="addToCart('Power Bank',1800)">Add to Cart</button>
+            </div>
+        </div>
+
+    </div>
 </section>
-</main>
+
+<section class="section" id="cart">
+    <h2 class="section-title">Your <span>Shopping Cart</span></h2>
+
+    <div class="cart-box">
+        <div id="cart-items">Your cart is empty.</div>
+        <h3 style="margin-top:20px;">
+            Total: ৳ <span id="cart-total">0</span>
+        </h3>
+        <br>
+        <button class="btn" onclick="checkout()">Order on WhatsApp</button>
+    </div>
+</section>
+
+<section class="section about" id="about">
+    <h2 class="section-title">About <span>Plugsy BD</span></h2>
+    <p>
+        Plugsy BD is an online gadget store focused on bringing
+        modern technology and useful electronic accessories to
+        customers. Our goal is to make shopping simple, convenient
+        and affordable.
+    </p>
+</section>
+
+<section class="section contact" id="contact">
+    <h2 class="section-title">Contact <span>Us</span></h2>
+    <p>Interested in our products? Contact us for orders and information.</p>
+    <p>Email: plugsybd@gmail.com</p>
+    <p>Location: Bangladesh</p>
+</section>
 
 <footer>
- <div class="container"><strong>PLUGSY BD</strong> — Smart Gadget Store<br>
- <span>© <span id="year"></span> Plugsy BD. All rights reserved.</span></div>
+    <p>© 2026 Plugsy BD. All Rights Reserved.</p>
+    <p>Designed with ❤️ for Technology Lovers</p>
 </footer>
 
-<!-- CART -->
-<div class="overlay" id="cartOverlay" onclick="backdropClose(event,'cartOverlay')">
-<div class="modal">
- <div class="modal-head"><h2>🛒 Your Cart</h2><button class="close" onclick="closeModal('cartOverlay')">✕</button></div>
- <div id="cartItems"></div>
- <div id="cartSummary"></div>
- <button class="btn" style="width:100%;margin-top:12px" onclick="openCheckout()">Proceed to Checkout</button>
-</div>
-</div>
-
-<!-- CHECKOUT -->
-<div class="overlay" id="checkoutOverlay" onclick="backdropClose(event,'checkoutOverlay')">
-<div class="modal">
- <div class="modal-head"><h2>Checkout</h2><button class="close" onclick="closeModal('checkoutOverlay')">✕</button></div>
- <form id="checkoutForm" onsubmit="placeOrder(event)">
-  <div class="form-grid">
-   <div class="form-group"><label>আপনার নাম *</label><input class="field" id="customerName" required></div>
-   <div class="form-group"><label>মোবাইল নম্বর *</label><input class="field" id="customerPhone" required inputmode="tel"></div>
-   <div class="form-group"><label>ডেলিভারি এলাকা *</label>
-    <select class="field" id="deliveryArea" onchange="updateCheckoutTotal()">
-     <option value="inside">ঢাকার ভিতরে</option><option value="outside">ঢাকার বাইরে</option>
-    </select>
-   </div>
-   <div class="form-group"><label>ঠিকানা *</label><input class="field" id="customerAddress" required></div>
-   <div class="form-group full"><label>অতিরিক্ত নোট (ঐচ্ছিক)</label><textarea class="field" id="customerNote" rows="2"></textarea></div>
-  </div>
-  <div id="checkoutTotal"></div>
-  <button class="btn" type="submit" style="width:100%;margin-top:12px">Order via WhatsApp</button>
- </form>
-</div>
-</div>
-
-<!-- ADMIN -->
-<div class="overlay" id="adminOverlay" onclick="backdropClose(event,'adminOverlay')">
-<div class="modal">
- <div class="modal-head"><h2>⚙ Admin Panel</h2><button class="close" onclick="closeModal('adminOverlay')">✕</button></div>
- <div id="adminLogin">
-  <p class="muted">অ্যাডমিন প্যানেলে প্রবেশ করতে পাসওয়ার্ড দিন।</p>
-  <input class="field" id="adminPassword" type="password" placeholder="Admin password">
-  <button class="btn" style="width:100%;margin-top:12px" onclick="loginAdmin()">Login</button>
-  <p id="loginError" style="color:#fb7185"></p>
- </div>
- <div id="adminContent" hidden>
-  <div class="notice">সতর্কতা: GitHub Pages-এ এই কোড দেখা যায়। এই পাসওয়ার্ড নিরাপদ সার্ভার-ভিত্তিক authentication নয়। পণ্য ও সেটিংস এই ব্রাউজারের localStorage-এ সেভ হয়; অন্য ভিজিটরের কাছে নিজে থেকে আপডেট হবে না।</div>
-  <div class="admin-tabs">
-   <button class="active" onclick="showAdminTab('productsTab',this)">Products</button>
-   <button onclick="showAdminTab('settingsTab',this)">Settings</button>
-  </div>
-  <div id="productsTab">
-   <h3 id="editorTitle">Add New Product</h3>
-   <input type="hidden" id="editId">
-   <div class="form-grid">
-    <div class="form-group"><label>Product name *</label><input class="field" id="pName"></div>
-    <div class="form-group"><label>Price (৳) *</label><input class="field" id="pPrice" type="number" min="0"></div>
-    <div class="form-group"><label>Old price (৳)</label><input class="field" id="pOldPrice" type="number" min="0"></div>
-    <div class="form-group"><label>Image URL</label><input class="field" id="pImage" placeholder="https://..."></div>
-    <div class="form-group full"><label>Description</label><textarea class="field" id="pDesc" rows="2"></textarea></div>
-   </div>
-   <button class="btn" onclick="saveProduct()">Save Product</button>
-   <button class="btn secondary" onclick="resetProductForm()">Clear</button>
-   <h3 style="margin-top:24px">Manage Products</h3>
-   <div class="admin-list" id="adminProductList"></div>
-  </div>
-  <div id="settingsTab" hidden>
-   <div class="form-group"><label>WhatsApp number (country code সহ, যেমন 8801XXXXXXXXX)</label><input class="field" id="whatsappNumber"></div>
-   <div class="form-grid">
-    <div class="form-group"><label>ঢাকার ভিতরে ডেলিভারি চার্জ (৳)</label><input class="field" id="insideFee" type="number" min="0"></div>
-    <div class="form-group"><label>ঢাকার বাইরে ডেলিভারি চার্জ (৳)</label><input class="field" id="outsideFee" type="number" min="0"></div>
-   </div>
-   <button class="btn" onclick="saveSettings()">Save Settings</button>
-  </div>
-  <button class="btn danger small" style="margin-top:20px" onclick="logoutAdmin()">Logout</button>
- </div>
-</div>
-</div>
-
 <script>
-// ADMIN PASSWORD
-const ADMIN_PASSWORD = "200643112007";
+    let cart = JSON.parse(localStorage.getItem("plugsyCart")) || [];
 
-const DEFAULT_PRODUCTS = [
- {id:1,name:"Smart Watch Ultra",price:1890,oldPrice:2490,image:"https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800",desc:"স্টাইলিশ ডিজাইন ও স্মার্ট ফিচারসহ প্রিমিয়াম স্মার্ট ওয়াচ।"},
- {id:2,name:"Wireless Earbuds Pro",price:1290,oldPrice:1690,image:"https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?w=800",desc:"ক্লিয়ার সাউন্ড ও আরামদায়ক ফিটিংয়ের ওয়্যারলেস ইয়ারবাড।"},
- {id:3,name:"RGB Gaming Mouse",price:790,oldPrice:990,image:"https://images.unsplash.com/photo-1527814050087-3793815479db?w=800",desc:"গেমিং ও দৈনন্দিন ব্যবহারের জন্য RGB মাউস।"},
- {id:4,name:"Bluetooth Speaker",price:1490,oldPrice:1890,image:"https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=800",desc:"পোর্টেবল ডিজাইন ও শক্তিশালী সাউন্ডের ব্লুটুথ স্পিকার।"}
-];
+    function saveCart() {
+        localStorage.setItem("plugsyCart", JSON.stringify(cart));
+        updateCart();
+    }
 
-const read=(key,fallback)=>{try{const v=localStorage.getItem(key);return v?JSON.parse(v):fallback}catch(e){return fallback}};
-let products=read("plugsy_products",DEFAULT_PRODUCTS);
-let cart=read("plugsy_cart",[]);
-let settings=read("plugsy_settings",{whatsapp:"8801XXXXXXXXX",inside:60,outside:120});
-const money=n=>"৳"+Number(n||0).toLocaleString("en-BD");
-const save=(key,val)=>localStorage.setItem(key,JSON.stringify(val));
+    function addToCart(name, price) {
+        cart.push({name, price});
+        saveCart();
+        alert(name + " added to cart!");
+    }
 
-function safeText(s){
- return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-}
+    function removeItem(index) {
+        cart.splice(index, 1);
+        saveCart();
+    }
 
-function renderProducts(){
- const q=document.getElementById("search").value.toLowerCase();
- const sort=document.getElementById("sort").value;
- let list=products.filter(p=>(p.name+" "+p.desc).toLowerCase().includes(q));
- if(sort==="low")list.sort((a,b)=>a.price-b.price);
- if(sort==="high")list.sort((a,b)=>b.price-a.price);
- document.getElementById("productCount").textContent=list.length+" products";
- document.getElementById("productGrid").innerHTML=list.length?list.map(p=>`
- <article class="product">
-  <img src="${safeText(p.image||"")}" alt="${safeText(p.name)}" onerror="this.src='https://placehold.co/600x400/111827/00e5ff?text=Plugsy+BD'">
-  <div class="product-body">
-   <h3>${safeText(p.name)}</h3><div class="desc">${safeText(p.desc)}</div>
-   <div class="price-line"><span class="price">${money(p.price)}</span>
-   ${p.oldPrice>p.price?`<span class="old">${money(p.oldPrice)}</span><span class="discount">${Math.round((1-p.price/p.oldPrice)*100)}% OFF</span>`:""}</div>
-   <button class="btn" onclick="addToCart(${p.id})">Add to Cart</button>
-  </div>
- </article>`).join(""):'<div class="empty">কোনো পণ্য পাওয়া যায়নি।</div>';
-}
+    function updateCart() {
+        const cartItems = document.getElementById("cart-items");
+        const cartTotal = document.getElementById("cart-total");
+        const cartCount = document.getElementById("cart-count");
 
-function addToCart(id){
- let item=cart.find(x=>x.id===id);
- if(item)item.qty++;else cart.push({id,qty:1});
- save("plugsy_cart",cart);updateCartCount();
-}
-function updateCartCount(){document.getElementById("cartCount").textContent=cart.reduce((s,x)=>s+x.qty,0)}
-function cartTotal(){return cart.reduce((sum,x)=>{let p=products.find(p=>p.id===x.id);return sum+(p?p.price*x.qty:0)},0)}
-function openCart(){renderCart();openModal("cartOverlay")}
-function renderCart(){
- cart=cart.filter(x=>products.some(p=>p.id===x.id));save("plugsy_cart",cart);
- let el=document.getElementById("cartItems");
- el.innerHTML=cart.length?cart.map(x=>{
-  let p=products.find(p=>p.id===x.id);
-  return `<div class="cart-row"><div><strong>${safeText(p.name)}</strong><div class="muted">${money(p.price)} × ${x.qty}</div></div>
-  <div class="qty"><button onclick="changeQty(${x.id},-1)">−</button>${x.qty}<button onclick="changeQty(${x.id},1)">+</button><button class="btn danger small" onclick="removeCart(${x.id})">×</button></div></div>`;
- }).join(""):'<div class="empty">আপনার কার্ট খালি।</div>';
- document.getElementById("cartSummary").innerHTML=`<div class="total grand"><span>Subtotal</span><span>${money(cartTotal())}</span></div>`;
- updateCartCount();
-}
-function changeQty(id,d){let x=cart.find(x=>x.id===id);if(x)x.qty+=d;cart=cart.filter(x=>x.qty>0);save("plugsy_cart",cart);renderCart()}
-function removeCart(id){cart=cart.filter(x=>x.id!==id);save("plugsy_cart",cart);renderCart()}
-function openCheckout(){
- if(!cart.length){alert("আপনার কার্টে কোনো পণ্য নেই।");return}
- closeModal("cartOverlay");updateCheckoutTotal();openModal("checkoutOverlay");
-}
-function updateCheckoutTotal(){
- let fee=document.getElementById("deliveryArea").value==="inside"?Number(settings.inside):Number(settings.outside);
- document.getElementById("checkoutTotal").innerHTML=`<div class="total"><span>পণ্যের দাম</span><span>${money(cartTotal())}</span></div>
- <div class="total"><span>ডেলিভারি চার্জ</span><span>${money(fee)}</span></div>
- <div class="total grand"><span>সর্বমোট</span><span>${money(cartTotal()+fee)}</span></div>`;
-}
-function placeOrder(e){
- e.preventDefault();if(!cart.length)return;
- let name=document.getElementById("customerName").value.trim();
- let phone=document.getElementById("customerPhone").value.trim();
- let address=document.getElementById("customerAddress").value.trim();
- let area=document.getElementById("deliveryArea").value;
- let note=document.getElementById("customerNote").value.trim();
- let fee=area==="inside"?Number(settings.inside):Number(settings.outside);
- let lines=cart.map(x=>{let p=products.find(p=>p.id===x.id);return `• ${p.name} × ${x.qty} = ${money(p.price*x.qty)}`}).join("\n");
- let message=`নতুন অর্ডার - Plugsy BD\n\n${lines}\n\nপণ্যের দাম: ${money(cartTotal())}\nডেলিভারি: ${money(fee)}\nসর্বমোট: ${money(cartTotal()+fee)}\n\nনাম: ${name}\nফোন: ${phone}\nএলাকা: ${area==="inside"?"ঢাকার ভিতরে":"ঢাকার বাইরে"}\nঠিকানা: ${address}\nনোট: ${note||"নেই"}`;
- let number=String(settings.whatsapp||"").replace(/\D/g,"");
- if(!number||number.includes("XXXXXXXX")){alert("Admin Panel থেকে সঠিক WhatsApp নম্বর সেট করুন।");return}
- window.open(`https://wa.me/${number}?text=${encodeURIComponent(message)}`,"_blank");
- cart=[];save("plugsy_cart",cart);updateCartCount();closeModal("checkoutOverlay");document.getElementById("checkoutForm").reset();
-}
-function openAdmin(){
- document.getElementById("adminLogin").hidden=false;
- document.getElementById("adminContent").hidden=true;
- document.getElementById("adminPassword").value="";
- document.getElementById("loginError").textContent="";
- openModal("adminOverlay");
-}
-function loginAdmin(){
- if(document.getElementById("adminPassword").value===ADMIN_PASSWORD){
-  document.getElementById("adminLogin").hidden=true;
-  document.getElementById("adminContent").hidden=false;
-  loadAdmin();
- }else document.getElementById("loginError").textContent="ভুল পাসওয়ার্ড। আবার চেষ্টা করুন।";
-}
-function logoutAdmin(){
- document.getElementById("adminContent").hidden=true;
- document.getElementById("adminLogin").hidden=false;
- document.getElementById("adminPassword").value="";
-}
-function loadAdmin(){
- renderAdminList();
- document.getElementById("whatsappNumber").value=settings.whatsapp;
- document.getElementById("insideFee").value=settings.inside;
- document.getElementById("outsideFee").value=settings.outside;
-}
-function showAdminTab(id,btn){
- document.getElementById("productsTab").hidden=id!=="productsTab";
- document.getElementById("settingsTab").hidden=id!=="settingsTab";
- document.querySelectorAll(".admin-tabs button").forEach(b=>b.classList.remove("active"));
- btn.classList.add("active");
-}
-function renderAdminList(){
- document.getElementById("adminProductList").innerHTML=products.map(p=>`
- <div class="admin-item"><div><strong>${safeText(p.name)}</strong><small>${money(p.price)}</small></div>
- <div><button class="btn secondary small" onclick="editProduct(${p.id})">Edit</button>
- <button class="btn danger small" onclick="deleteProduct(${p.id})">Delete</button></div></div>`).join("")||'<p class="muted">No products yet.</p>';
-}
-function saveProduct(){
- let name=document.getElementById("pName").value.trim();
- let price=Number(document.getElementById("pPrice").value);
- let oldPrice=Number(document.getElementById("pOldPrice").value)||0;
- let image=document.getElementById("pImage").value.trim();
- let desc=document.getElementById("pDesc").value.trim();
- let id=Number(document.getElementById("editId").value);
- if(!name||!price||price<0){alert("পণ্যের নাম ও সঠিক দাম দিন।");return}
- if(image&&!/^https?:\/\//i.test(image)){alert("সঠিক image URL দিন (https:// দিয়ে শুরু)।");return}
- if(id)products=products.map(p=>p.id===id?{...p,name,price,oldPrice,image,desc}:p);
- else products.push({id:Date.now(),name,price,oldPrice,image,desc});
- save("plugsy_products",products);resetProductForm();renderProducts();renderAdminList();
-}
-function editProduct(id){
- let p=products.find(p=>p.id===id);if(!p)return;
- document.getElementById("editId").value=p.id;
- document.getElementById("pName").value=p.name;
- document.getElementById("pPrice").value=p.price;
- document.getElementById("pOldPrice").value=p.oldPrice||"";
- document.getElementById("pImage").value=p.image||"";
- document.getElementById("pDesc").value=p.desc||"";
- document.getElementById("editorTitle").textContent="Edit Product";
-}
-function deleteProduct(id){
- if(!confirm("এই পণ্যটি ডিলিট করবেন?"))return;
- products=products.filter(p=>p.id!==id);save("plugsy_products",products);renderProducts();renderAdminList();
-}
-function resetProductForm(){
- ["editId","pName","pPrice","pOldPrice","pImage","pDesc"].forEach(id=>document.getElementById(id).value="");
- document.getElementById("editorTitle").textContent="Add New Product";
-}
-function saveSettings(){
- settings={
-  whatsapp:document.getElementById("whatsappNumber").value.trim(),
-  inside:Math.max(0,Number(document.getElementById("insideFee").value)||0),
-  outside:Math.max(0,Number(document.getElementById("outsideFee").value)||0)
- };
- save("plugsy_settings",settings);alert("Settings saved in this browser.");
-}
-function openModal(id){document.getElementById(id).classList.add("show")}
-function closeModal(id){document.getElementById(id).classList.remove("show")}
-function backdropClose(e,id){if(e.target.id===id)closeModal(id)}
-document.getElementById("year").textContent=new Date().getFullYear();
-renderProducts();updateCartCount();
+        cartCount.textContent = cart.length;
+
+        if (cart.length === 0) {
+            cartItems.textContent = "Your cart is empty.";
+            cartTotal.textContent = "0";
+            return;
+        }
+
+        let total = 0;
+        cartItems.innerHTML = "";
+
+        cart.forEach((item, index) => {
+            total += item.price;
+
+            const div = document.createElement("div");
+            div.className = "cart-item";
+
+            const name = document.createElement("span");
+            name.textContent = item.name + " - ৳ " + item.price;
+
+            const remove = document.createElement("button");
+            remove.className = "remove-btn";
+            remove.textContent = "Remove";
+            remove.onclick = () => removeItem(index);
+
+            div.append(name, remove);
+            cartItems.appendChild(div);
+        });
+
+        cartTotal.textContent = total;
+    }
+
+    function checkout() {
+        if (cart.length === 0) {
+            alert("Your cart is empty!");
+            return;
+        }
+
+        let message = "Hello Plugsy BD! I want to order:\n\n";
+        let total = 0;
+
+        cart.forEach(item => {
+            message += item.name + " - Tk " + item.price + "\n";
+            total += item.price;
+        });
+
+        message += "\nTotal: Tk " + total;
+        message += "\n\nPlease contact me about this order.";
+
+        // নিজের WhatsApp নম্বর বসাও: দেশের কোডসহ, + চিহ্ন ছাড়া
+        const whatsappNumber = "8801XXXXXXXXX";
+
+        if (whatsappNumber.includes("X")) {
+            alert("Please add your WhatsApp number in the website code first.");
+            return;
+        }
+
+        window.open(
+            "https://wa.me/" + whatsappNumber + "?text=" +
+            encodeURIComponent(message),
+            "_blank"
+        );
+    }
+
+    updateCart();
 </script>
+
 </body>
 </html>
+```
